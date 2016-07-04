@@ -18,7 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ST.JHOSEPH COLLEGE" id="YBx-3q-31F"/>
+                    <navigationItem key="navigationItem" title="ST.JHOSEPH COLLEGE" id="YBx-3q-31F">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="ZVz-kW-N2S">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -32,6 +36,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gG3-SQ-niB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.19215686274509805" green="0.22352941176470589" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -43,4 +51,7 @@
             <point key="canvasLocation" x="130" y="309"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hamburger" width="20" height="20"/>
+    </resources>
 </document>
