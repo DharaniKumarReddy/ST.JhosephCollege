@@ -14,6 +14,21 @@
 		05555F7D1D2A041900FBC31C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05555F7B1D2A041900FBC31C /* LaunchScreen.storyboard */; };
 		05555F881D2A041A00FBC31C /* Saint_JosephTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05555F871D2A041A00FBC31C /* Saint_JosephTests.swift */; };
 		05555F931D2A041A00FBC31C /* Saint_JosephUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05555F921D2A041A00FBC31C /* Saint_JosephUITests.swift */; };
+		05B9CC821D369C92001290A4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC811D369C92001290A4 /* MenuViewController.swift */; };
+		05B9CC831D369C92001290A4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC811D369C92001290A4 /* MenuViewController.swift */; };
+		05B9CC841D369C92001290A4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC811D369C92001290A4 /* MenuViewController.swift */; };
+		05B9CC861D36A303001290A4 /* SlidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC851D36A303001290A4 /* SlidingViewController.swift */; };
+		05B9CC871D36A303001290A4 /* SlidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC851D36A303001290A4 /* SlidingViewController.swift */; };
+		05B9CC881D36A303001290A4 /* SlidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC851D36A303001290A4 /* SlidingViewController.swift */; };
+		05B9CC8A1D36A728001290A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC891D36A728001290A4 /* Constants.swift */; };
+		05B9CC8B1D36A728001290A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC891D36A728001290A4 /* Constants.swift */; };
+		05B9CC8C1D36A728001290A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC891D36A728001290A4 /* Constants.swift */; };
+		05B9CC8E1D36A960001290A4 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC8D1D36A960001290A4 /* UIStoryboardExtensions.swift */; };
+		05B9CC8F1D36A960001290A4 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC8D1D36A960001290A4 /* UIStoryboardExtensions.swift */; };
+		05B9CC901D36A960001290A4 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC8D1D36A960001290A4 /* UIStoryboardExtensions.swift */; };
+		05B9CC921D36ACF2001290A4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC911D36ACF2001290A4 /* BaseViewController.swift */; };
+		05B9CC931D36ACF2001290A4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC911D36ACF2001290A4 /* BaseViewController.swift */; };
+		05B9CC941D36ACF2001290A4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC911D36ACF2001290A4 /* BaseViewController.swift */; };
 		5BE3A4C1723F467DD3C4DDDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7BBFE70484F4675AA1A87A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +63,12 @@
 		05555F8E1D2A041A00FBC31C /* Saint JosephUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Saint JosephUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05555F921D2A041A00FBC31C /* Saint_JosephUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saint_JosephUITests.swift; sourceTree = "<group>"; };
 		05555F941D2A041A00FBC31C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05B9CC811D369C92001290A4 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		05B9CC851D36A303001290A4 /* SlidingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingViewController.swift; sourceTree = "<group>"; };
+		05B9CC891D36A728001290A4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		05B9CC8D1D36A960001290A4 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
+		05B9CC911D36ACF2001290A4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		05EDAFE51D2AA3F800813F30 /* Saint Joseph-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Saint Joseph-Bridging-Header.h"; sourceTree = "<group>"; };
 		AD7BBFE70484F4675AA1A87A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0EBE9D0DE8676ADBCE185D1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E072C95922588CB26A4CF520 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +131,12 @@
 				05555F791D2A041900FBC31C /* Assets.xcassets */,
 				05555F7B1D2A041900FBC31C /* LaunchScreen.storyboard */,
 				05555F7E1D2A041900FBC31C /* Info.plist */,
+				05EDAFE51D2AA3F800813F30 /* Saint Joseph-Bridging-Header.h */,
+				05B9CC811D369C92001290A4 /* MenuViewController.swift */,
+				05B9CC851D36A303001290A4 /* SlidingViewController.swift */,
+				05B9CC891D36A728001290A4 /* Constants.swift */,
+				05B9CC8D1D36A960001290A4 /* UIStoryboardExtensions.swift */,
+				05B9CC911D36ACF2001290A4 /* BaseViewController.swift */,
 			);
 			path = "Saint Joseph";
 			sourceTree = "<group>";
@@ -315,8 +342,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B9CC8E1D36A960001290A4 /* UIStoryboardExtensions.swift in Sources */,
+				05B9CC8A1D36A728001290A4 /* Constants.swift in Sources */,
 				05555F751D2A041900FBC31C /* ViewController.swift in Sources */,
+				05B9CC821D369C92001290A4 /* MenuViewController.swift in Sources */,
 				05555F731D2A041900FBC31C /* AppDelegate.swift in Sources */,
+				05B9CC921D36ACF2001290A4 /* BaseViewController.swift in Sources */,
+				05B9CC861D36A303001290A4 /* SlidingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +357,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				05555F881D2A041A00FBC31C /* Saint_JosephTests.swift in Sources */,
+				05B9CC831D369C92001290A4 /* MenuViewController.swift in Sources */,
+				05B9CC871D36A303001290A4 /* SlidingViewController.swift in Sources */,
+				05B9CC8F1D36A960001290A4 /* UIStoryboardExtensions.swift in Sources */,
+				05B9CC8B1D36A728001290A4 /* Constants.swift in Sources */,
+				05B9CC931D36ACF2001290A4 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +370,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				05555F931D2A041A00FBC31C /* Saint_JosephUITests.swift in Sources */,
+				05B9CC841D369C92001290A4 /* MenuViewController.swift in Sources */,
+				05B9CC881D36A303001290A4 /* SlidingViewController.swift in Sources */,
+				05B9CC901D36A960001290A4 /* UIStoryboardExtensions.swift in Sources */,
+				05B9CC8C1D36A728001290A4 /* Constants.swift in Sources */,
+				05B9CC941D36ACF2001290A4 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,11 +501,14 @@
 			baseConfigurationReference = B0EBE9D0DE8676ADBCE185D1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Saint Joseph/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saintjoseph.Saint-Jhoseph";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Saint Joseph/Saint Joseph-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -472,11 +517,13 @@
 			baseConfigurationReference = E072C95922588CB26A4CF520 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Saint Joseph/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saintjoseph.Saint-Jhoseph";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Saint Joseph/Saint Joseph-Bridging-Header.h";
 			};
 			name = Release;
 		};

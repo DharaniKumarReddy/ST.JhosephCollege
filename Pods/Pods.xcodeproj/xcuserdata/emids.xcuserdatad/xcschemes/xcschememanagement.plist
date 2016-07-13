@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MBProgressHUD.xcscheme</key>
+		<key>ECSlidingViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>44F456E0C4430A95FA56A0615D1ED8BC</key>
+		<key>20497209DEB840850EED0BE27B7D731B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>96B2763E2725AB370355E817AAEC6085</key>
+		<key>6B42690F6F3F5BFD1FF41089B8812807</key>
 		<dict>
 			<key>primary</key>
 			<true/>
