@@ -8,27 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		05555F731D2A041900FBC31C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05555F721D2A041900FBC31C /* AppDelegate.swift */; };
-		05555F751D2A041900FBC31C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05555F741D2A041900FBC31C /* ViewController.swift */; };
 		05555F781D2A041900FBC31C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05555F761D2A041900FBC31C /* Main.storyboard */; };
 		05555F7A1D2A041900FBC31C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05555F791D2A041900FBC31C /* Assets.xcassets */; };
 		05555F7D1D2A041900FBC31C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05555F7B1D2A041900FBC31C /* LaunchScreen.storyboard */; };
 		05555F881D2A041A00FBC31C /* Saint_JosephTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05555F871D2A041A00FBC31C /* Saint_JosephTests.swift */; };
 		05555F931D2A041A00FBC31C /* Saint_JosephUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05555F921D2A041A00FBC31C /* Saint_JosephUITests.swift */; };
-		05B9CC821D369C92001290A4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC811D369C92001290A4 /* MenuViewController.swift */; };
-		05B9CC831D369C92001290A4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC811D369C92001290A4 /* MenuViewController.swift */; };
-		05B9CC841D369C92001290A4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC811D369C92001290A4 /* MenuViewController.swift */; };
-		05B9CC861D36A303001290A4 /* SlidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC851D36A303001290A4 /* SlidingViewController.swift */; };
-		05B9CC871D36A303001290A4 /* SlidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC851D36A303001290A4 /* SlidingViewController.swift */; };
-		05B9CC881D36A303001290A4 /* SlidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC851D36A303001290A4 /* SlidingViewController.swift */; };
 		05B9CC8A1D36A728001290A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC891D36A728001290A4 /* Constants.swift */; };
 		05B9CC8B1D36A728001290A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC891D36A728001290A4 /* Constants.swift */; };
 		05B9CC8C1D36A728001290A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC891D36A728001290A4 /* Constants.swift */; };
-		05B9CC8E1D36A960001290A4 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC8D1D36A960001290A4 /* UIStoryboardExtensions.swift */; };
-		05B9CC8F1D36A960001290A4 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC8D1D36A960001290A4 /* UIStoryboardExtensions.swift */; };
-		05B9CC901D36A960001290A4 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC8D1D36A960001290A4 /* UIStoryboardExtensions.swift */; };
-		05B9CC921D36ACF2001290A4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC911D36ACF2001290A4 /* BaseViewController.swift */; };
-		05B9CC931D36ACF2001290A4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC911D36ACF2001290A4 /* BaseViewController.swift */; };
-		05B9CC941D36ACF2001290A4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC911D36ACF2001290A4 /* BaseViewController.swift */; };
+		05C801481D393A930010DA3A /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05C801471D393A930010DA3A /* News.storyboard */; };
+		05C8014B1D393D5B0010DA3A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8014A1D393D5B0010DA3A /* NewsViewController.swift */; };
+		05C8014C1D393D5B0010DA3A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8014A1D393D5B0010DA3A /* NewsViewController.swift */; };
+		05C8014D1D393D5B0010DA3A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8014A1D393D5B0010DA3A /* NewsViewController.swift */; };
+		05C801501D3942CB0010DA3A /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8014F1D3942CB0010DA3A /* APICaller.swift */; };
+		05C801511D3942CB0010DA3A /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8014F1D3942CB0010DA3A /* APICaller.swift */; };
+		05C801521D3942CB0010DA3A /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8014F1D3942CB0010DA3A /* APICaller.swift */; };
+		05C801551D3947920010DA3A /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C801541D3947920010DA3A /* Route.swift */; };
+		05C801561D3947920010DA3A /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C801541D3947920010DA3A /* Route.swift */; };
+		05C801571D3947920010DA3A /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C801541D3947920010DA3A /* Route.swift */; };
+		05C801591D39495E0010DA3A /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C801581D39495E0010DA3A /* StringExtensions.swift */; };
+		05C8015A1D39495E0010DA3A /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C801581D39495E0010DA3A /* StringExtensions.swift */; };
+		05C8015B1D39495E0010DA3A /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C801581D39495E0010DA3A /* StringExtensions.swift */; };
+		05C801611D3956CA0010DA3A /* OLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C801601D3956CA0010DA3A /* OLModel.m */; };
+		05C801921D3961870010DA3A /* OLModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C801651D3957B50010DA3A /* OLModels.m */; };
+		05C801941D39625C0010DA3A /* OLModelKeyMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C801931D39625C0010DA3A /* OLModelKeyMappers.swift */; };
+		05D896981D388FCB0038D8BD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D896941D388FCB0038D8BD /* BaseViewController.swift */; };
+		05D896991D388FCB0038D8BD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D896941D388FCB0038D8BD /* BaseViewController.swift */; };
+		05D8969A1D388FCB0038D8BD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D896941D388FCB0038D8BD /* BaseViewController.swift */; };
+		05D8969B1D388FCB0038D8BD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D896951D388FCB0038D8BD /* MenuViewController.swift */; };
+		05D8969C1D388FCB0038D8BD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D896951D388FCB0038D8BD /* MenuViewController.swift */; };
+		05D8969D1D388FCB0038D8BD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D896951D388FCB0038D8BD /* MenuViewController.swift */; };
+		05D8969E1D388FCB0038D8BD /* SlidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D896961D388FCB0038D8BD /* SlidingViewController.swift */; };
+		05D8969F1D388FCB0038D8BD /* SlidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D896961D388FCB0038D8BD /* SlidingViewController.swift */; };
+		05D896A01D388FCB0038D8BD /* SlidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D896961D388FCB0038D8BD /* SlidingViewController.swift */; };
+		05D896A11D388FCB0038D8BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D896971D388FCB0038D8BD /* ViewController.swift */; };
+		05D896A21D388FCB0038D8BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D896971D388FCB0038D8BD /* ViewController.swift */; };
+		05D896A31D388FCB0038D8BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D896971D388FCB0038D8BD /* ViewController.swift */; };
+		05D896A71D388FF90038D8BD /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D896A61D388FF90038D8BD /* UIStoryboardExtensions.swift */; };
+		05D896A81D388FF90038D8BD /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D896A61D388FF90038D8BD /* UIStoryboardExtensions.swift */; };
+		05D896A91D388FF90038D8BD /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D896A61D388FF90038D8BD /* UIStoryboardExtensions.swift */; };
+		05D896AE1D38904E0038D8BD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05D896AB1D38904E0038D8BD /* Info.plist */; };
+		05D896AF1D38904E0038D8BD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05D896AB1D38904E0038D8BD /* Info.plist */; };
 		5BE3A4C1723F467DD3C4DDDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7BBFE70484F4675AA1A87A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -52,23 +72,52 @@
 /* Begin PBXFileReference section */
 		05555F6F1D2A041900FBC31C /* Saint Joseph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Saint Joseph.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05555F721D2A041900FBC31C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		05555F741D2A041900FBC31C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		05555F771D2A041900FBC31C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05555F791D2A041900FBC31C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05555F7C1D2A041900FBC31C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		05555F7E1D2A041900FBC31C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05555F831D2A041A00FBC31C /* Saint JosephTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Saint JosephTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05555F871D2A041A00FBC31C /* Saint_JosephTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saint_JosephTests.swift; sourceTree = "<group>"; };
 		05555F891D2A041A00FBC31C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05555F8E1D2A041A00FBC31C /* Saint JosephUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Saint JosephUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05555F921D2A041A00FBC31C /* Saint_JosephUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saint_JosephUITests.swift; sourceTree = "<group>"; };
 		05555F941D2A041A00FBC31C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05B9CC811D369C92001290A4 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		05B9CC851D36A303001290A4 /* SlidingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingViewController.swift; sourceTree = "<group>"; };
 		05B9CC891D36A728001290A4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		05B9CC8D1D36A960001290A4 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
-		05B9CC911D36ACF2001290A4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		05EDAFE51D2AA3F800813F30 /* Saint Joseph-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Saint Joseph-Bridging-Header.h"; sourceTree = "<group>"; };
+		05C801471D393A930010DA3A /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = News.storyboard; path = Base.lproj/News/News.storyboard; sourceTree = "<group>"; };
+		05C8014A1D393D5B0010DA3A /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		05C8014F1D3942CB0010DA3A /* APICaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		05C801541D3947920010DA3A /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Route.swift; path = Enums/Route.swift; sourceTree = "<group>"; };
+		05C801581D39495E0010DA3A /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Extensions/StringExtensions.swift; sourceTree = "<group>"; };
+		05C8015D1D3956C80010DA3A /* Saint JosephTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Saint JosephTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		05C8015E1D3956C80010DA3A /* Saint JosephUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Saint JosephUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		05C8015F1D3956CA0010DA3A /* OLModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OLModel.h; path = Models/OLModel.h; sourceTree = "<group>"; };
+		05C801601D3956CA0010DA3A /* OLModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OLModel.m; path = Models/OLModel.m; sourceTree = "<group>"; };
+		05C801641D3957950010DA3A /* OLModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OLModels.h; path = Models/OLModels.h; sourceTree = "<group>"; };
+		05C801651D3957B50010DA3A /* OLModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OLModels.m; path = Models/OLModels.m; sourceTree = "<group>"; };
+		05C8016B1D3958530010DA3A /* OLNews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OLNews.h; path = Models/ObjC/OLNews.h; sourceTree = "<group>"; };
+		05C8016C1D3959D00010DA3A /* OLNewsFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OLNewsFeed.h; path = Models/ObjC/OLNewsFeed.h; sourceTree = "<group>"; };
+		05C8016D1D395D9D0010DA3A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "../../../Library/Developer/Xcode/DerivedData/Saint_Joseph-guupgitdbkesnzcfjdfnrkdmkesp/Build/Products/Debug-iphonesimulator/libPods.a"; sourceTree = "<group>"; };
+		05C8016F1D395E020010DA3A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		05C801711D395E180010DA3A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		05C801731D395E270010DA3A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		05C801751D395E340010DA3A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		05C801771D395E460010DA3A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		05C801791D395E4C0010DA3A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		05C8017B1D395E5A0010DA3A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		05C8017D1D395E600010DA3A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		05C8017F1D395E740010DA3A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		05C801811D395E830010DA3A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		05C801831D395EAB0010DA3A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		05C801861D395EC10010DA3A /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		05C801881D395EC70010DA3A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		05C8018A1D395ED20010DA3A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		05C801931D39625C0010DA3A /* OLModelKeyMappers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OLModelKeyMappers.swift; path = Models/OLModelKeyMappers.swift; sourceTree = "<group>"; };
+		05D896941D388FCB0038D8BD /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Controllers/BaseViewController.swift; sourceTree = "<group>"; };
+		05D896951D388FCB0038D8BD /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Controllers/MenuViewController.swift; sourceTree = "<group>"; };
+		05D896961D388FCB0038D8BD /* SlidingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlidingViewController.swift; path = Controllers/SlidingViewController.swift; sourceTree = "<group>"; };
+		05D896971D388FCB0038D8BD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
+		05D896A61D388FF90038D8BD /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStoryboardExtensions.swift; path = Extensions/UIStoryboardExtensions.swift; sourceTree = "<group>"; };
+		05D896AB1D38904E0038D8BD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		05D896AC1D38904E0038D8BD /* Saint Joseph-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Saint Joseph-Bridging-Header.h"; path = "Supporting Files/Saint Joseph-Bridging-Header.h"; sourceTree = "<group>"; };
 		AD7BBFE70484F4675AA1A87A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0EBE9D0DE8676ADBCE185D1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E072C95922588CB26A4CF520 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,18 +174,17 @@
 		05555F711D2A041900FBC31C /* Saint Joseph */ = {
 			isa = PBXGroup;
 			children = (
+				05D896931D388F750038D8BD /* DashBoard */,
+				05C801491D393C630010DA3A /* News */,
 				05555F721D2A041900FBC31C /* AppDelegate.swift */,
-				05555F741D2A041900FBC31C /* ViewController.swift */,
-				05555F761D2A041900FBC31C /* Main.storyboard */,
-				05555F791D2A041900FBC31C /* Assets.xcassets */,
-				05555F7B1D2A041900FBC31C /* LaunchScreen.storyboard */,
-				05555F7E1D2A041900FBC31C /* Info.plist */,
-				05EDAFE51D2AA3F800813F30 /* Saint Joseph-Bridging-Header.h */,
-				05B9CC811D369C92001290A4 /* MenuViewController.swift */,
-				05B9CC851D36A303001290A4 /* SlidingViewController.swift */,
+				05C8014F1D3942CB0010DA3A /* APICaller.swift */,
 				05B9CC891D36A728001290A4 /* Constants.swift */,
-				05B9CC8D1D36A960001290A4 /* UIStoryboardExtensions.swift */,
-				05B9CC911D36ACF2001290A4 /* BaseViewController.swift */,
+				05555F7B1D2A041900FBC31C /* LaunchScreen.storyboard */,
+				05555F791D2A041900FBC31C /* Assets.xcassets */,
+				05C801531D39476E0010DA3A /* Enums */,
+				05D896A51D388FE90038D8BD /* Extensions */,
+				05C8015C1D3956660010DA3A /* Models */,
+				05D896AA1D38900F0038D8BD /* Supporting Files */,
 			);
 			path = "Saint Joseph";
 			sourceTree = "<group>";
@@ -159,9 +207,95 @@
 			path = "Saint JosephUITests";
 			sourceTree = "<group>";
 		};
+		05C801491D393C630010DA3A /* News */ = {
+			isa = PBXGroup;
+			children = (
+				05C801471D393A930010DA3A /* News.storyboard */,
+				05C8014A1D393D5B0010DA3A /* NewsViewController.swift */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
+		05C801531D39476E0010DA3A /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				05C801541D3947920010DA3A /* Route.swift */,
+			);
+			name = Enums;
+			sourceTree = "<group>";
+		};
+		05C8015C1D3956660010DA3A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				05C8015F1D3956CA0010DA3A /* OLModel.h */,
+				05C801601D3956CA0010DA3A /* OLModel.m */,
+				05C801641D3957950010DA3A /* OLModels.h */,
+				05C801651D3957B50010DA3A /* OLModels.m */,
+				05C801931D39625C0010DA3A /* OLModelKeyMappers.swift */,
+				05C801691D3957ED0010DA3A /* ObjC */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		05C801691D3957ED0010DA3A /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				05C8016C1D3959D00010DA3A /* OLNewsFeed.h */,
+				05C8016B1D3958530010DA3A /* OLNews.h */,
+			);
+			name = ObjC;
+			sourceTree = "<group>";
+		};
+		05D896931D388F750038D8BD /* DashBoard */ = {
+			isa = PBXGroup;
+			children = (
+				05555F761D2A041900FBC31C /* Main.storyboard */,
+				05D896941D388FCB0038D8BD /* BaseViewController.swift */,
+				05D896951D388FCB0038D8BD /* MenuViewController.swift */,
+				05D896961D388FCB0038D8BD /* SlidingViewController.swift */,
+				05D896971D388FCB0038D8BD /* ViewController.swift */,
+			);
+			name = DashBoard;
+			sourceTree = "<group>";
+		};
+		05D896A51D388FE90038D8BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				05D896A61D388FF90038D8BD /* UIStoryboardExtensions.swift */,
+				05C801581D39495E0010DA3A /* StringExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		05D896AA1D38900F0038D8BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05D896AB1D38904E0038D8BD /* Info.plist */,
+				05C8015D1D3956C80010DA3A /* Saint JosephTests-Bridging-Header.h */,
+				05C8015E1D3956C80010DA3A /* Saint JosephUITests-Bridging-Header.h */,
+				05D896AC1D38904E0038D8BD /* Saint Joseph-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		3F8C770A464929E87001EAFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05C8018A1D395ED20010DA3A /* AudioToolbox.framework */,
+				05C801881D395EC70010DA3A /* Social.framework */,
+				05C801861D395EC10010DA3A /* Accounts.framework */,
+				05C801831D395EAB0010DA3A /* libsqlite3.tbd */,
+				05C801811D395E830010DA3A /* QuartzCore.framework */,
+				05C8017F1D395E740010DA3A /* libz.tbd */,
+				05C8017D1D395E600010DA3A /* SystemConfiguration.framework */,
+				05C8017B1D395E5A0010DA3A /* Security.framework */,
+				05C801791D395E4C0010DA3A /* CoreLocation.framework */,
+				05C801771D395E460010DA3A /* CoreGraphics.framework */,
+				05C801751D395E340010DA3A /* CFNetwork.framework */,
+				05C801731D395E270010DA3A /* MobileCoreServices.framework */,
+				05C801711D395E180010DA3A /* UIKit.framework */,
+				05C8016F1D395E020010DA3A /* Foundation.framework */,
+				05C8016D1D395D9D0010DA3A /* libPods.a */,
 				AD7BBFE70484F4675AA1A87A /* libPods.a */,
 			);
 			name = Frameworks;
@@ -284,6 +418,7 @@
 			files = (
 				05555F7D1D2A041900FBC31C /* LaunchScreen.storyboard in Resources */,
 				05555F7A1D2A041900FBC31C /* Assets.xcassets in Resources */,
+				05C801481D393A930010DA3A /* News.storyboard in Resources */,
 				05555F781D2A041900FBC31C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D896AE1D38904E0038D8BD /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +435,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D896AF1D38904E0038D8BD /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,13 +479,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B9CC8E1D36A960001290A4 /* UIStoryboardExtensions.swift in Sources */,
+				05C801611D3956CA0010DA3A /* OLModel.m in Sources */,
 				05B9CC8A1D36A728001290A4 /* Constants.swift in Sources */,
-				05555F751D2A041900FBC31C /* ViewController.swift in Sources */,
-				05B9CC821D369C92001290A4 /* MenuViewController.swift in Sources */,
+				05D896A11D388FCB0038D8BD /* ViewController.swift in Sources */,
+				05D8969B1D388FCB0038D8BD /* MenuViewController.swift in Sources */,
+				05C801551D3947920010DA3A /* Route.swift in Sources */,
 				05555F731D2A041900FBC31C /* AppDelegate.swift in Sources */,
-				05B9CC921D36ACF2001290A4 /* BaseViewController.swift in Sources */,
-				05B9CC861D36A303001290A4 /* SlidingViewController.swift in Sources */,
+				05C801921D3961870010DA3A /* OLModels.m in Sources */,
+				05C801501D3942CB0010DA3A /* APICaller.swift in Sources */,
+				05C801591D39495E0010DA3A /* StringExtensions.swift in Sources */,
+				05C801941D39625C0010DA3A /* OLModelKeyMappers.swift in Sources */,
+				05D896A71D388FF90038D8BD /* UIStoryboardExtensions.swift in Sources */,
+				05D896981D388FCB0038D8BD /* BaseViewController.swift in Sources */,
+				05D8969E1D388FCB0038D8BD /* SlidingViewController.swift in Sources */,
+				05C8014B1D393D5B0010DA3A /* NewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,12 +500,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D896A21D388FCB0038D8BD /* ViewController.swift in Sources */,
 				05555F881D2A041A00FBC31C /* Saint_JosephTests.swift in Sources */,
-				05B9CC831D369C92001290A4 /* MenuViewController.swift in Sources */,
-				05B9CC871D36A303001290A4 /* SlidingViewController.swift in Sources */,
-				05B9CC8F1D36A960001290A4 /* UIStoryboardExtensions.swift in Sources */,
 				05B9CC8B1D36A728001290A4 /* Constants.swift in Sources */,
-				05B9CC931D36ACF2001290A4 /* BaseViewController.swift in Sources */,
+				05C801561D3947920010DA3A /* Route.swift in Sources */,
+				05D8969F1D388FCB0038D8BD /* SlidingViewController.swift in Sources */,
+				05C801511D3942CB0010DA3A /* APICaller.swift in Sources */,
+				05C8015A1D39495E0010DA3A /* StringExtensions.swift in Sources */,
+				05D896A81D388FF90038D8BD /* UIStoryboardExtensions.swift in Sources */,
+				05D896991D388FCB0038D8BD /* BaseViewController.swift in Sources */,
+				05D8969C1D388FCB0038D8BD /* MenuViewController.swift in Sources */,
+				05C8014C1D393D5B0010DA3A /* NewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,12 +518,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D896A31D388FCB0038D8BD /* ViewController.swift in Sources */,
 				05555F931D2A041A00FBC31C /* Saint_JosephUITests.swift in Sources */,
-				05B9CC841D369C92001290A4 /* MenuViewController.swift in Sources */,
-				05B9CC881D36A303001290A4 /* SlidingViewController.swift in Sources */,
-				05B9CC901D36A960001290A4 /* UIStoryboardExtensions.swift in Sources */,
 				05B9CC8C1D36A728001290A4 /* Constants.swift in Sources */,
-				05B9CC941D36ACF2001290A4 /* BaseViewController.swift in Sources */,
+				05C801571D3947920010DA3A /* Route.swift in Sources */,
+				05D896A01D388FCB0038D8BD /* SlidingViewController.swift in Sources */,
+				05C801521D3942CB0010DA3A /* APICaller.swift in Sources */,
+				05C8015B1D39495E0010DA3A /* StringExtensions.swift in Sources */,
+				05D896A91D388FF90038D8BD /* UIStoryboardExtensions.swift in Sources */,
+				05D8969A1D388FCB0038D8BD /* BaseViewController.swift in Sources */,
+				05D8969D1D388FCB0038D8BD /* MenuViewController.swift in Sources */,
+				05C8014D1D393D5B0010DA3A /* NewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,12 +656,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = "Saint Joseph/Info.plist";
+				INFOPLIST_FILE = "Saint Joseph/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saintjoseph.Saint-Jhoseph";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Saint Joseph/Saint Joseph-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Saint Joseph/Supporting Files/Saint Joseph-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -518,12 +672,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = "Saint Joseph/Info.plist";
+				INFOPLIST_FILE = "Saint Joseph/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saintjoseph.Saint-Jhoseph";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Saint Joseph/Saint Joseph-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Saint Joseph/Supporting Files/Saint Joseph-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -531,10 +685,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "Saint JosephTests/Info.plist";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Saint JosephTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saintjoseph.Saint-JosephTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Saint Joseph/Saint JosephTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Saint Joseph.app/Saint Joseph";
 			};
 			name = Debug;
@@ -543,10 +700,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "Saint JosephTests/Info.plist";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Saint JosephTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saintjoseph.Saint-JosephTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Saint Joseph/Saint JosephTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Saint Joseph.app/Saint Joseph";
 			};
 			name = Release;
@@ -554,10 +713,13 @@
 		05555F9E1D2A041A00FBC31C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "Saint JosephUITests/Info.plist";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Saint JosephUITests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saintjoseph.Saint-JosephUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Saint Joseph/Saint JosephUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_TARGET_NAME = "Saint Joseph";
 			};
 			name = Debug;
@@ -565,10 +727,12 @@
 		05555F9F1D2A041A00FBC31C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "Saint JosephUITests/Info.plist";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Saint JosephUITests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saintjoseph.Saint-JosephUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Saint Joseph/Saint JosephUITests-Bridging-Header.h";
 				TEST_TARGET_NAME = "Saint Joseph";
 			};
 			name = Release;

@@ -11,9 +11,14 @@ struct Constants {
     
     struct StoryBoard {
         static let Main = "Main"
+        static let News = "News"
     }
     
     struct NavigationController {
         static let DashboardNavigationController = "DashboardNavigationController"
+    }
+
+    struct ErrorMessage {
+        static let InternetConnectionLost             = "Internet connection lost"
     }
 }
