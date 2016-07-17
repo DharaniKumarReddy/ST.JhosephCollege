@@ -15,3 +15,11 @@
 @implementation OLNews
 
 @end
+
+@implementation OLGallery
+
+@end
+
+@implementation OLImageItem
+
+@end

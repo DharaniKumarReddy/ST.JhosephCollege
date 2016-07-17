@@ -8,11 +8,12 @@
 
 import Foundation
 
-typealias OnSuccessResponse = String -> Void
-typealias OnErrorMessage = String -> Void
+typealias OnSuccessResponse     = String -> Void
+typealias OnErrorMessage            = String -> Void
 
-typealias OnNewsFeed = OLNewsFeed -> Void
-typealias JSONDictionary = [String : AnyObject]
+typealias OnGallery                       = OLGallery -> Void
+typealias OnNewsFeed                  = OLNewsFeed -> Void
+typealias JSONDictionary              = [String : AnyObject]
 
 private enum RequestMethod: String, CustomStringConvertible {
     case GET = "GET"
@@ -162,10 +163,16 @@ class APICaller {
         dataTask.resume()
     }
     
-    func fetchNews(onSuccess onSuccess: OnNewsFeed, onError: OnErrorMessage)  {
+    func fetchNews(onSuccessNews onSuccess: OnNewsFeed, onError: OnErrorMessage)  {
         enqueueRequest(.GET, .News, onSuccessResponse: { responseString in
             let newsFeed = OLNewsFeed(jsonString: responseString)
             onSuccess(newsFeed)
+            }, onErrorMessage: onError)
+    }
+    
+    func fetchGallery(onSuccessGallery onSuccess: OnGallery, onError: OnErrorMessage) {
+        enqueueRequest(.GET, .Gallery, onSuccessResponse: { _ in
+            
             }, onErrorMessage: onError)
     }
 }

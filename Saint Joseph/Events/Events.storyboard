@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8dg-LZ-STG">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--EVENTS-->
+        <scene sceneID="lac-13-gEv">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9bh-9W-jaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="EventsViewController" id="8dg-LZ-STG" customClass="EventsViewController" customModule="Saint_Joseph" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RmG-pd-rah"/>
+                        <viewControllerLayoutGuide type="bottom" id="pp2-bq-0jD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="egc-hr-PJE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="EVENTS" id="JbT-rW-XRq">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="PjS-2d-49x">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="hamburgerPressed:" destination="8dg-LZ-STG" id="ohf-1N-2A4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO">
+                        <color key="barTintColor" red="0.08235294118" green="0.39607843139999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </simulatedNavigationBarMetrics>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="637" y="1030"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hamburger" width="20" height="20"/>
+    </resources>
+</document>

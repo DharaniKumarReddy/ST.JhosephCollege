@@ -1,9 +1,9 @@
 //
 //  OLModel.m
-//  AlwaysOn
+//  Saint Joseph
 //
-//  Created by Kyle Thomas on 6/10/14.
-//  Copyright (c) 2014 Onlife Health. All rights reserved.
+//  Created by Dharani on 7/15/16.
+//  Copyright © 2016 Dharani. All rights reserved.
 //
 
 #import "OLModel.h"

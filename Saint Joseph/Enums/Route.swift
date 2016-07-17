@@ -9,18 +9,22 @@
 import Foundation
 
 let BASEURL = "http://sjec.edu.in/sjec_app/sjec_"
+let PHP = ".php"
 
 enum Route {
     case News               //GET
+    case Gallery             //GET
     
     var absoluteURL: NSURL {
-        return NSURL(string: BASEURL + apiPath)!
+        return NSURL(string: BASEURL + apiPath + PHP)!
     }
     
     private var apiPath: String {
         switch self {
         case .News:
-            return "news.php"
+            return "news"
+        case.Gallery:
+            return "images"
         }
     }
     
@@ -28,6 +32,8 @@ enum Route {
         switch self {
         case .News:
             return "News has been watched"
+        case.Gallery:
+            return "Gallery has been watched"
         }
     }
     

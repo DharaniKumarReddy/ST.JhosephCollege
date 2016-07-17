@@ -8,3 +8,5 @@
 
 #import "OLNewsFeed.h"
 #import "OLNews.h"
+#import "OLGallery.h"
+#import "OLImageItem.h"

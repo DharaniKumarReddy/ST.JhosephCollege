@@ -37,7 +37,29 @@ extension OLNews {
     override public class func keyMapper() -> JSONKeyMapper {
         return JSONKeyMapper(dictionary: [
             "description" : "descript",
-            "updated_at" : "updatedAt"
+            "updated_at" : "updatedAt",
+            "s_img" : "smallImageURL",
+            "l_img" : "largeImageURL"
             ])
     }
 }
+
+extension OLGallery {
+    override public class func keyMapper() -> JSONKeyMapper {
+        return JSONKeyMapper(dictionary: [
+            "sjec_images" : "gallery"
+            ])
+    }
+}
+
+extension OLImageItem {
+    override public class func keyMapper() -> JSONKeyMapper {
+        return JSONKeyMapper(dictionary: [
+            "img:" : "imgURL"
+            ])
+    }
+}
+
+
+
+
