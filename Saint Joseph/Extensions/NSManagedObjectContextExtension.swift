@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 extension NSManagedObject {
-    class func newWithContext(context: NSManagedObjectContext, entityName: String) {
+    class func newWithContext(context: NSManagedObjectContext, entityName: String) -> AnyObject{
         return NSEntityDescription.insertNewObjectForEntityForName(entityName, inManagedObjectContext: context)
     }
 }

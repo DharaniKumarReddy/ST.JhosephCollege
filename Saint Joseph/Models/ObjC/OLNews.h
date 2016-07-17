@@ -16,5 +16,7 @@
 @property (nonatomic) NSString *type;
 @property (nonatomic) NSString *descript;
 @property (nonatomic) NSString *updatedAt;
+@property (nonatomic) NSString *smallImageURL;
+@property (nonatomic) NSString *largeImageURL;
 
 @end

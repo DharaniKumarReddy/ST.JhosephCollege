@@ -8,7 +8,6 @@
         <!--EVENTS-->
         <scene sceneID="lac-13-gEv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9bh-9W-jaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="EventsViewController" id="8dg-LZ-STG" customClass="EventsViewController" customModule="Saint_Joseph" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RmG-pd-rah"/>
@@ -31,6 +30,7 @@
                         <color key="barTintColor" red="0.08235294118" green="0.39607843139999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                     </simulatedNavigationBarMetrics>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9bh-9W-jaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="637" y="1030"/>
         </scene>

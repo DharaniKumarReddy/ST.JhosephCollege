@@ -26,11 +26,23 @@ class BaseViewController: UIViewController {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         
-      //  let entity = NSEntityDescription.entityForName("News", inManagedObjectContext: managedContext)
+        let entity = NSEntityDescription.entityForName("News", inManagedObjectContext: managedContext)
         
-        for newsObject in news {
-            let newsValues =  NewsData.newWithContext(managedContext, entityName: "News")
+//        for newsObject in news {
+//            let newsValues =  NewsData.newWithContext(managedContext, entityName: "News")
+//            
+//        }
+        for i in 0...news.count-1 {
+            let newsData: NewsData = NewsData(entity: entity!, insertIntoManagedObjectContext: managedContext)
+            let newsEvents = news[i]
+            newsData.date = 
             
+            do {
+                try managedContext.save()
+                
+            } catch let error as NSError  {
+                print("Could not save \(error), \(error.userInfo)")
+            }
         }
       //  let newsValues =  NewsData.newWithContext(managedContext, entityName: "News") //NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
         
