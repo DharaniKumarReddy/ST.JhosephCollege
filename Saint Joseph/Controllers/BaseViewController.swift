@@ -32,10 +32,12 @@ class BaseViewController: UIViewController {
 //            let newsValues =  NewsData.newWithContext(managedContext, entityName: "News")
 //            
 //        }
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         for i in 0...news.count-1 {
             let newsData: NewsData = NewsData(entity: entity!, insertIntoManagedObjectContext: managedContext)
             let newsEvents = news[i]
-            newsData.date = 
+            newsData.date =  formatter.dateFromString(newsEvents.date)
             
             do {
                 try managedContext.save()

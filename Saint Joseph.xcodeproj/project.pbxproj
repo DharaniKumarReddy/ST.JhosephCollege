@@ -42,9 +42,6 @@
 		05555F931D2A041A00FBC31C /* Saint_JosephUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05555F921D2A041A00FBC31C /* Saint_JosephUITests.swift */; };
 		056CF4571D3BB5F20014BAB2 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F681D3B6C860026130E /* NewsData.swift */; };
 		056CF4581D3BB5F30014BAB2 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F681D3B6C860026130E /* NewsData.swift */; };
-		056CF45B1D3BB9C50014BAB2 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056CF45A1D3BB9C50014BAB2 /* DateFormatters.swift */; };
-		056CF45C1D3BB9C50014BAB2 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056CF45A1D3BB9C50014BAB2 /* DateFormatters.swift */; };
-		056CF45D1D3BB9C50014BAB2 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056CF45A1D3BB9C50014BAB2 /* DateFormatters.swift */; };
 		05B9CC8A1D36A728001290A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC891D36A728001290A4 /* Constants.swift */; };
 		05B9CC8B1D36A728001290A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC891D36A728001290A4 /* Constants.swift */; };
 		05B9CC8C1D36A728001290A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC891D36A728001290A4 /* Constants.swift */; };
@@ -124,7 +121,6 @@
 		05555F8E1D2A041A00FBC31C /* Saint JosephUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Saint JosephUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05555F921D2A041A00FBC31C /* Saint_JosephUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saint_JosephUITests.swift; sourceTree = "<group>"; };
 		05555F941D2A041A00FBC31C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		056CF45A1D3BB9C50014BAB2 /* DateFormatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatters.swift; path = Helpers/DateFormatters.swift; sourceTree = "<group>"; };
 		05B9CC891D36A728001290A4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		05C8014F1D3942CB0010DA3A /* APICaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		05C801541D3947920010DA3A /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Route.swift; path = Enums/Route.swift; sourceTree = "<group>"; };
@@ -264,7 +260,6 @@
 				05555F7B1D2A041900FBC31C /* LaunchScreen.storyboard */,
 				05555F791D2A041900FBC31C /* Assets.xcassets */,
 				05267F201D3B28000026130E /* SJDataModel.xcdatamodeld */,
-				056CF4591D3BB9B20014BAB2 /* Helpers */,
 				05C801531D39476E0010DA3A /* Enums */,
 				05D896A51D388FE90038D8BD /* Extensions */,
 				05267F661D3B69860026130E /* Core Data */,
@@ -290,14 +285,6 @@
 				05555F941D2A041A00FBC31C /* Info.plist */,
 			);
 			path = "Saint JosephUITests";
-			sourceTree = "<group>";
-		};
-		056CF4591D3BB9B20014BAB2 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				056CF45A1D3BB9C50014BAB2 /* DateFormatters.swift */,
-			);
-			name = Helpers;
 			sourceTree = "<group>";
 		};
 		05C801491D393C630010DA3A /* News */ = {
@@ -585,7 +572,6 @@
 				05B9CC8A1D36A728001290A4 /* Constants.swift in Sources */,
 				05D896A11D388FCB0038D8BD /* ViewController.swift in Sources */,
 				05267F691D3B6C860026130E /* NewsData.swift in Sources */,
-				056CF45B1D3BB9C50014BAB2 /* DateFormatters.swift in Sources */,
 				05D8969B1D388FCB0038D8BD /* MenuViewController.swift in Sources */,
 				05C801551D3947920010DA3A /* Route.swift in Sources */,
 				05555F731D2A041900FBC31C /* AppDelegate.swift in Sources */,
@@ -608,7 +594,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				056CF45C1D3BB9C50014BAB2 /* DateFormatters.swift in Sources */,
 				05D896A21D388FCB0038D8BD /* ViewController.swift in Sources */,
 				05267F641D3B67680026130E /* NSManagedObjectContextExtension.swift in Sources */,
 				05555F881D2A041A00FBC31C /* Saint_JosephTests.swift in Sources */,
@@ -634,7 +619,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				056CF45D1D3BB9C50014BAB2 /* DateFormatters.swift in Sources */,
 				05D896A31D388FCB0038D8BD /* ViewController.swift in Sources */,
 				05267F651D3B67680026130E /* NSManagedObjectContextExtension.swift in Sources */,
 				05555F931D2A041A00FBC31C /* Saint_JosephUITests.swift in Sources */,
