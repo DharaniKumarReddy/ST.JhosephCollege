@@ -16,6 +16,14 @@
                     <view key="view" contentMode="scaleToFill" id="YNt-39-Y6O">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vf4-lG-vhV">
+                                <rect key="frame" x="139" y="274" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="NEWS" id="ofo-J1-wYm">
@@ -29,6 +37,9 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO">
                         <color key="barTintColor" red="0.08235294118" green="0.39607843139999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                     </simulatedNavigationBarMetrics>
+                    <connections>
+                        <outlet property="label" destination="vf4-lG-vhV" id="Nx6-eg-826"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BuB-DG-5jg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -36,6 +47,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hamburger" width="20" height="20"/>
+        <image name="hamburger" width="40" height="40"/>
     </resources>
 </document>

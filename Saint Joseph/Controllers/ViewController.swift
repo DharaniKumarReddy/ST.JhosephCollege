@@ -10,25 +10,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var news: [NewsData]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchNewsFeed()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    // MARK:- API Caller Method
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        print(news)
+    }
     
-    private func fetchNewsFeed() {
-        let taskGroup = dispatch_group_create()
-        dispatch_group_enter(taskGroup)
-        APICaller.getInstance().fetchNews(
-            onSuccessNews: { newsFeed in
-                dispatch_group_leave(taskGroup)
-                print(newsFeed)
-            }, onError: { _ in
-                dispatch_group_leave(taskGroup)
-        })
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segue.identifier! {
+        case "NewsSegue":
+            let newsViewController = segue.destinationViewController as! NewsViewController
+            newsViewController.news = news
+        case "EventsSegue", "AnnouncementsSegue":
+            let eventsController = segue.destinationViewController as! EventsViewController
+            eventsController.controllerType = segue.identifier == "EventsSegue" ? .Events : .Announcements
+        default:
+            print("Do nothing for other cases")
+        }
     }
 }
 

@@ -8,6 +8,9 @@
 
 #import "OLModel.h"
 
+@protocol OLNews
+@end
+
 @interface OLNews : OLModel
 
 @property (nonatomic) NSInteger id;

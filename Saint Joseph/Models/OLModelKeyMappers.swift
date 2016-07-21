@@ -25,21 +25,21 @@ import Foundation
  read-only var, then JSONModel throws an error.
  */
 
-extension OLNewsFeed {
-    override public class func keyMapper() -> JSONKeyMapper {
-        return JSONKeyMapper(dictionary: [
-            "sjec_news" : "news"
-            ])
-    }
-}
+//extension OLNewsFeed {
+//    override public class func keyMapper() -> JSONKeyMapper {
+//        return JSONKeyMapper(dictionary: [
+//            "sjec_news" : "news"
+//            ])
+//    }
+//}
 
 extension OLNews {
     override public class func keyMapper() -> JSONKeyMapper {
         return JSONKeyMapper(dictionary: [
             "description" : "descript",
             "updated_at" : "updatedAt",
-            "s_img" : "smallImageURL",
-            "l_img" : "largeImageURL"
+            "simg" : "smallImageURL",
+            "limg" : "largeImageURL"
             ])
     }
 }

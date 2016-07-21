@@ -8,7 +8,7 @@
         <!--ST.JHOSEPH COLLEGE-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Saint_Joseph" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Saint_Joseph" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -58,7 +58,7 @@
                                 <rect key="frame" x="160" y="316" width="160" height="126"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="Tyq-Kf-2ck" kind="push" id="H6E-pb-HRR"/>
+                                    <segue destination="Tyq-Kf-2ck" kind="push" identifier="GallerySegue" id="H6E-pb-HRR"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gallery" translatesAutoresizingMaskIntoConstraints="NO" id="tVh-iU-AET">
@@ -112,7 +112,7 @@
                                 <rect key="frame" x="0.0" y="190" width="160" height="126"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="lko-Cr-1wz" kind="push" id="ObM-2q-otd"/>
+                                    <segue destination="pHx-0O-yuJ" kind="push" identifier="AnnouncementsSegue" id="VFF-FA-hno"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="announcements" translatesAutoresizingMaskIntoConstraints="NO" id="59V-7B-Y0P">
@@ -132,7 +132,7 @@
                                 <rect key="frame" x="0.0" y="64" width="160" height="126"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="NHv-5W-AEj" kind="push" id="csC-cB-nYx"/>
+                                    <segue destination="NHv-5W-AEj" kind="push" identifier="NewsSegue" id="csC-cB-nYx"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news" translatesAutoresizingMaskIntoConstraints="NO" id="hC3-PE-npo">
@@ -152,7 +152,7 @@
                                 <rect key="frame" x="160" y="64" width="160" height="126"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="pHx-0O-yuJ" kind="push" id="Krd-d1-DZ3"/>
+                                    <segue destination="pHx-0O-yuJ" kind="push" identifier="EventsSegue" id="Krd-d1-DZ3"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events" translatesAutoresizingMaskIntoConstraints="NO" id="CTU-i6-Szb">
@@ -381,7 +381,18 @@
                     <view key="view" contentMode="scaleToFill" id="LrK-AQ-wXe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="k7a-KH-ybL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JzX-ex-LNV" firstAttribute="top" secondItem="k7a-KH-ybL" secondAttribute="bottom" id="DUZ-DB-aZV"/>
+                            <constraint firstItem="k7a-KH-ybL" firstAttribute="top" secondItem="LrK-AQ-wXe" secondAttribute="top" id="jO2-bJ-E61"/>
+                            <constraint firstItem="k7a-KH-ybL" firstAttribute="leading" secondItem="LrK-AQ-wXe" secondAttribute="leading" id="uac-tv-Cbd"/>
+                            <constraint firstAttribute="trailing" secondItem="k7a-KH-ybL" secondAttribute="trailing" id="zXo-9e-GJV"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="NI0-Uo-SrJ" kind="modal" identifier="SlidingViewControllerSegue" modalTransitionStyle="crossDissolve" id="zCa-3e-Zfo"/>
@@ -462,8 +473,11 @@
         <image name="erp" width="48" height="48"/>
         <image name="events" width="48" height="48"/>
         <image name="gallery" width="48" height="48"/>
-        <image name="hamburger" width="40" height="40"/>
+        <image name="hamburger" width="20" height="20"/>
         <image name="news" width="48" height="48"/>
         <image name="videos" width="48" height="48"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="VFF-FA-hno"/>
+    </inferredMetricsTieBreakers>
 </document>

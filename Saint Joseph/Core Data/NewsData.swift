@@ -12,7 +12,6 @@ import CoreData
 class NewsData: NSManagedObject {
     var date: NSDate!
     var descript: NSString!
-    var id: NSString!
     var largeImageURL: NSString!
     var smallImageURL: NSString!
     var title: NSString!

@@ -11,6 +11,8 @@ import CoreData
 
 class BaseViewController: UIViewController {
     
+    var result: [NewsData]!
+    
     private var newsEventsData = [NSManagedObject]()
 
     override func viewDidLoad() {
@@ -22,32 +24,40 @@ class BaseViewController: UIViewController {
     
     // MARK:- Save Core Data
     
-    private func saveData(news: [OLNews]) {
+    private func saveData(news: NSArray) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         
         let entity = NSEntityDescription.entityForName("News", inManagedObjectContext: managedContext)
+        var newsDataObjects = [NewsData]()
         
-//        for newsObject in news {
-//            let newsValues =  NewsData.newWithContext(managedContext, entityName: "News")
-//            
-//        }
         let formatter = NSDateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         for i in 0...news.count-1 {
             let newsData: NewsData = NewsData(entity: entity!, insertIntoManagedObjectContext: managedContext)
-            let newsEvents = news[i]
-            newsData.date =  formatter.dateFromString(newsEvents.date)
-            
-            do {
-                try managedContext.save()
-                
-            } catch let error as NSError  {
-                print("Could not save \(error), \(error.userInfo)")
-            }
+            let newsEvents = news[i] as! NSDictionary
+          //  newsData.date =  formatter.dateFromString((newsEvents["date"] ?? "") as! String)
+            newsData.descript = newsEvents["description"] as! NSString
+            newsData.largeImageURL = newsEvents["limg"] as! NSString
+            newsData.smallImageURL = newsEvents["simg"] as! NSString
+            newsData.title = newsEvents["title"] as! NSString
+            newsData.type = newsEvents["type"] as! NSString
+            newsData.updatedAt = newsEvents["updated_at"] as! NSString
+            print(newsData)
+            newsDataObjects.append(newsData)
         }
-      //  let newsValues =  NewsData.newWithContext(managedContext, entityName: "News") //NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-        
+        do {
+            try managedContext.save()
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+        let fetchRequest = NSFetchRequest(entityName: "News")
+        do {
+            result = try managedContext.executeFetchRequest(fetchRequest) as! [NewsData]
+            print(result)
+        } catch let fetchError as NSError {
+            print("getGalleryForItem error: \(fetchError.localizedDescription)")
+        }
     }
     
     // MARK:- API Caller Method
@@ -58,9 +68,8 @@ class BaseViewController: UIViewController {
         APICaller.getInstance().fetchNews(
             onSuccessNews: { newsFeed in
                 dispatch_group_leave(taskGroup)
-                self.saveData(newsFeed.news)
+                self.saveData(newsFeed.sjec_news)
                 self.performSegueWithIdentifier("SlidingViewControllerSegue", sender: self)
-                print(newsFeed)
             }, onError: { _ in
                 dispatch_group_leave(taskGroup)
                 self.performSegueWithIdentifier("SlidingViewControllerSegue", sender: self)
@@ -82,6 +91,7 @@ class BaseViewController: UIViewController {
     
     private func setupSlidingViewController(slidingViewController: SlidingViewController) {
         slidingViewController.topViewController = UIStoryboard(Constants.StoryBoard.Main).instantiateNavigationController(Constants.NavigationController.DashboardNavigationController)
+        ((slidingViewController.topViewController as! UINavigationController).viewControllers[0] as! ViewController).news = result
     }
 
 }

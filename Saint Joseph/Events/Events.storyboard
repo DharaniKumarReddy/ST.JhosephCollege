@@ -16,7 +16,161 @@
                     <view key="view" contentMode="scaleToFill" id="egc-hr-PJE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NpA-Z6-GHo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnnouncementsCell" id="MHs-Hh-JVo">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MHs-Hh-JVo" id="m6x-J9-zJj">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cw4-fw-E5e">
+                                                    <rect key="frame" x="4" y="2" width="312" height="105"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="announcements" translatesAutoresizingMaskIntoConstraints="NO" id="EoE-Gz-OMD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="80" id="V9M-aQ-QRZ"/>
+                                                                <constraint firstAttribute="width" constant="80" id="hN7-3y-Jdv"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ace Designers Ltd." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Thl-p6-Aga">
+                                                            <rect key="frame" x="88" y="8" width="216" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mr.R.Narayan Giri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWs-Va-y6s">
+                                                            <rect key="frame" x="88" y="37" width="106" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9FD-Ej-ol8">
+                                                            <rect key="frame" x="80" y="79" width="232" height="1"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="gBs-TZ-hpi"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCv-dV-ERi">
+                                                            <rect key="frame" x="187" y="77" width="121" height="28"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <state key="normal" title="ADD TO CALENDAR"/>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="EoE-Gz-OMD" firstAttribute="leading" secondItem="cw4-fw-E5e" secondAttribute="leading" id="1gU-Cr-dIT"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ZCv-dV-ERi" secondAttribute="bottom" id="5kC-CP-hCt"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9FD-Ej-ol8" secondAttribute="trailing" id="AVF-er-ERM"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ZCv-dV-ERi" secondAttribute="trailing" constant="4" id="HgK-iB-PeR"/>
+                                                        <constraint firstItem="EoE-Gz-OMD" firstAttribute="top" secondItem="cw4-fw-E5e" secondAttribute="top" id="Wmn-jb-yCd"/>
+                                                        <constraint firstItem="NWs-Va-y6s" firstAttribute="top" secondItem="Thl-p6-Aga" secondAttribute="bottom" constant="8" id="h4w-ry-L8v"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Thl-p6-Aga" secondAttribute="trailing" constant="8" id="kFF-tg-TmL"/>
+                                                        <constraint firstItem="9FD-Ej-ol8" firstAttribute="leading" secondItem="EoE-Gz-OMD" secondAttribute="trailing" id="rM9-hC-cHl"/>
+                                                        <constraint firstItem="Thl-p6-Aga" firstAttribute="leading" secondItem="EoE-Gz-OMD" secondAttribute="trailing" constant="8" id="rgL-Ic-KXZ"/>
+                                                        <constraint firstItem="NWs-Va-y6s" firstAttribute="leading" secondItem="EoE-Gz-OMD" secondAttribute="trailing" constant="8" id="sU8-ED-ACN"/>
+                                                        <constraint firstItem="Thl-p6-Aga" firstAttribute="top" secondItem="cw4-fw-E5e" secondAttribute="top" constant="8" id="vae-X8-wHk"/>
+                                                        <constraint firstItem="9FD-Ej-ol8" firstAttribute="bottom" secondItem="EoE-Gz-OMD" secondAttribute="bottom" id="yfw-Ed-QRN"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="cw4-fw-E5e" secondAttribute="bottom" constant="2" id="gw7-Td-9FC"/>
+                                                <constraint firstItem="cw4-fw-E5e" firstAttribute="leading" secondItem="m6x-J9-zJj" secondAttribute="leading" constant="4" id="hd0-zq-b4V"/>
+                                                <constraint firstItem="cw4-fw-E5e" firstAttribute="top" secondItem="m6x-J9-zJj" secondAttribute="top" constant="2" id="kxr-19-vn8"/>
+                                                <constraint firstAttribute="trailing" secondItem="cw4-fw-E5e" secondAttribute="trailing" constant="4" id="uX8-Ko-Kgg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventsCell" id="B0f-pz-cTD">
+                                        <rect key="frame" x="0.0" y="202" width="320" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B0f-pz-cTD" id="LL4-Wz-bUJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="91M-0i-1pv">
+                                                    <rect key="frame" x="4" y="2" width="312" height="105"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qhi-TY-ztW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="80" id="7Nw-qt-jWC"/>
+                                                                <constraint firstAttribute="width" constant="80" id="AAt-gY-VyZ"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ace Designers Ltd." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fMx-3n-WZZ">
+                                                            <rect key="frame" x="88" y="8" width="216" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mr.R.Narayan Giri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdy-bs-T9h">
+                                                            <rect key="frame" x="88" y="37" width="106" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4A4-Qp-hp6">
+                                                            <rect key="frame" x="80" y="79" width="232" height="1"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="5Pa-At-fRG"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiI-be-1br">
+                                                            <rect key="frame" x="187" y="77" width="121" height="28"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <state key="normal" title="ADD TO CALENDAR"/>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="tdy-bs-T9h" firstAttribute="leading" secondItem="Qhi-TY-ztW" secondAttribute="trailing" constant="8" id="0Se-Ux-3Gd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="fMx-3n-WZZ" secondAttribute="trailing" constant="8" id="78x-SW-h6n"/>
+                                                        <constraint firstItem="Qhi-TY-ztW" firstAttribute="leading" secondItem="91M-0i-1pv" secondAttribute="leading" id="Iw9-WM-GSk"/>
+                                                        <constraint firstItem="tdy-bs-T9h" firstAttribute="top" secondItem="fMx-3n-WZZ" secondAttribute="bottom" constant="8" id="LXy-af-Gv8"/>
+                                                        <constraint firstAttribute="bottom" secondItem="HiI-be-1br" secondAttribute="bottom" id="QOr-gS-QcZ"/>
+                                                        <constraint firstItem="fMx-3n-WZZ" firstAttribute="leading" secondItem="Qhi-TY-ztW" secondAttribute="trailing" constant="8" id="RpZ-c9-kBT"/>
+                                                        <constraint firstItem="4A4-Qp-hp6" firstAttribute="bottom" secondItem="Qhi-TY-ztW" secondAttribute="bottom" id="Weh-Th-JUC"/>
+                                                        <constraint firstItem="Qhi-TY-ztW" firstAttribute="top" secondItem="91M-0i-1pv" secondAttribute="top" id="cmD-gP-OpW"/>
+                                                        <constraint firstAttribute="trailing" secondItem="4A4-Qp-hp6" secondAttribute="trailing" id="cmN-uZ-Ph9"/>
+                                                        <constraint firstItem="fMx-3n-WZZ" firstAttribute="top" secondItem="91M-0i-1pv" secondAttribute="top" constant="8" id="fvF-13-47R"/>
+                                                        <constraint firstItem="4A4-Qp-hp6" firstAttribute="leading" secondItem="Qhi-TY-ztW" secondAttribute="trailing" id="sSr-Z0-fQN"/>
+                                                        <constraint firstAttribute="trailing" secondItem="HiI-be-1br" secondAttribute="trailing" constant="4" id="yMc-2z-EpC"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="91M-0i-1pv" secondAttribute="bottom" constant="2" id="Ikb-mU-NSV"/>
+                                                <constraint firstAttribute="trailing" secondItem="91M-0i-1pv" secondAttribute="trailing" constant="4" id="Mcv-d3-gV6"/>
+                                                <constraint firstItem="91M-0i-1pv" firstAttribute="top" secondItem="LL4-Wz-bUJ" secondAttribute="top" constant="2" id="Z8D-2C-6Sb"/>
+                                                <constraint firstItem="91M-0i-1pv" firstAttribute="leading" secondItem="LL4-Wz-bUJ" secondAttribute="leading" constant="4" id="yvS-Gb-80i"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8dg-LZ-STG" id="caE-A0-P5l"/>
+                                    <outlet property="delegate" destination="8dg-LZ-STG" id="CBo-A5-sk5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pp2-bq-0jD" firstAttribute="top" secondItem="NpA-Z6-GHo" secondAttribute="bottom" id="Eh6-7G-pqb"/>
+                            <constraint firstItem="NpA-Z6-GHo" firstAttribute="leading" secondItem="egc-hr-PJE" secondAttribute="leading" id="M1h-LJ-i3o"/>
+                            <constraint firstAttribute="trailing" secondItem="NpA-Z6-GHo" secondAttribute="trailing" id="OFr-on-wuK"/>
+                            <constraint firstItem="NpA-Z6-GHo" firstAttribute="top" secondItem="egc-hr-PJE" secondAttribute="top" id="yY6-wd-fxw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="EVENTS" id="JbT-rW-XRq">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="PjS-2d-49x">
@@ -36,6 +190,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="announcements" width="48" height="48"/>
         <image name="hamburger" width="20" height="20"/>
     </resources>
 </document>
