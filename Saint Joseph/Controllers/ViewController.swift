@@ -26,12 +26,15 @@ class ViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier! {
-        case "NewsSegue":
+        case Constants.SegueIdentifier.NewsSegue:
             let newsViewController = segue.destinationViewController as! NewsViewController
             newsViewController.news = news
-        case "EventsSegue", "AnnouncementsSegue":
+        case Constants.SegueIdentifier.EventsSegue, Constants.SegueIdentifier.AnnouncementsSegue:
             let eventsController = segue.destinationViewController as! EventsViewController
-            eventsController.controllerType = segue.identifier == "EventsSegue" ? .Events : .Announcements
+            eventsController.controllerType = segue.identifier == Constants.SegueIdentifier.EventsSegue ? .Events : .Announcements
+        case Constants.SegueIdentifier.GallerySegue, Constants.SegueIdentifier.VideosSegue:
+            let galleryViewController = segue.destinationViewController as! GalleryViewController
+            galleryViewController.controllerType = segue.identifier == Constants.SegueIdentifier.GallerySegue ? .Gallery : .Videos
         default:
             print("Do nothing for other cases")
         }

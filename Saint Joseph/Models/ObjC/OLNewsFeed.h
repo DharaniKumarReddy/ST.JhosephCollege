@@ -7,7 +7,6 @@
 //
 
 #import "OLModel.h"
-#import "OLNews.h"
 
 @interface OLNewsFeed : OLModel
 

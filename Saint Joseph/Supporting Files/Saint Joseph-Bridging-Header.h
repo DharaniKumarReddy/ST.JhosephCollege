@@ -5,7 +5,7 @@
 
 #import <ECSlidingViewController/ECSlidingSegue.h>
 #import <ECSlidingViewController/ECSlidingViewController.h>
-#import "UIViewController+ECSlidingViewController.h"
+#import <ECSlidingViewController/UIViewController+ECSlidingViewController.h>
 
 
 // Models

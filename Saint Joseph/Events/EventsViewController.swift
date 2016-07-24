@@ -10,7 +10,7 @@ import UIKit
 
 class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var events: OLNews!
+    var events: [NewsData]!
     
     var controllerType: ControllerType!
     
@@ -23,7 +23,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = controllerType == .Events ? "Events" : "Announcements"
+        title = controllerType == .Events ? Constants.Title.Events : Constants.Title.Announcements
         // Do any additional setup after loading the view.
     }
     
@@ -35,10 +35,10 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if controllerType == .Events {
-            let cell = tableView.dequeueReusableCellWithIdentifier("EventsCell")!
+            let cell = tableView.dequeueReusableCellWithIdentifier(Constants.CellIdentifier.EventsCell)!
             return cell
         } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier("AnnouncementsCell")!
+            let cell = tableView.dequeueReusableCellWithIdentifier(Constants.CellIdentifier.AnnouncementsCell)!
             return cell
         }
     }

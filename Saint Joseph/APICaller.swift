@@ -12,7 +12,8 @@ typealias OnSuccessResponse     = String -> Void
 typealias OnErrorMessage            = String -> Void
 
 typealias OnGallery                       = OLGallery -> Void
-typealias OnNewsFeed                  = OLNewsFeed -> Void
+typealias OnVideos                        = OLVideos -> Void
+typealias OnNewsFeed                 = OLNewsFeed -> Void
 typealias JSONDictionary              = [String : AnyObject]
 
 private enum RequestMethod: String, CustomStringConvertible {
@@ -67,23 +68,6 @@ class APICaller {
                 for (key, value) in params {
                     queryItems.append(NSURLQueryItem(name: "\(key)".urlEscapedString(), value: "\(value)".urlEscapedString()))
                 }
-//                if queryItems.count > 0 {
-//                    let components = NSURLComponents(URL: request.URL!, resolvingAgainstBaseURL: false)
-//                    components?.queryItems = queryItems
-//                    
-//                    // Following replacement of strings needs to be done in a better way.. For Device integration API, ROR & .Net
-//                    
-//                    // .Net
-//                    components?.percentEncodedQuery = components?.percentEncodedQuery?.stringByReplacingOccurrencesOfString("UNIQUE", withString: "%26", options: NSStringCompareOptions.LiteralSearch, range: nil)
-//                    components?.percentEncodedQuery = components?.percentEncodedQuery?.stringByReplacingOccurrencesOfString(" ", withString: "%20", options: NSStringCompareOptions.LiteralSearch, range: nil)
-//                    
-//                    // For ROR
-//                    components?.percentEncodedQuery = components?.percentEncodedQuery?.stringByReplacingOccurrencesOfString("%2520", withString: "%20", options: NSStringCompareOptions.LiteralSearch, range: nil)
-//                    
-//                    request.URL = components?.URL
-//                } else {
-//                    logError("\(requestMethod) request failed to convert to a valid query string with params \(params)")
-//                }
             default:
                 break
             }
@@ -114,24 +98,6 @@ class APICaller {
                 default:
                     // Failure Response
                     let _: String?
-                  //  print(customErrorMessage)
-//                    switch (statusCode, route) {
-//                        
-//                    print("Error Occured")
-////                    case (401, _):
-////                        if responseString == "Access Token expired or Invalid" || responseString.length == 1 {
-////                            if let _ = KeyChainStore.sharedStore().token {
-////                                customErrorMessage = Constants.ErrorMessage.SessionExpired
-////                                self.logout()
-////                            }
-//                            onErrorMessage(responseString)
-//                            return
-//                        }
-//                    default:
-//                        break
-//                    }
-                    
-                 //   let errorMessage = customErrorMessage ?? "Error Code: \(statusCode)"
                     onErrorMessage(responseString)
                 }
                 
@@ -164,15 +130,29 @@ class APICaller {
     }
     
     func fetchNews(onSuccessNews onSuccess: OnNewsFeed, onError: OnErrorMessage)  {
-        enqueueRequest(.GET, .News, onSuccessResponse: { responseString in
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let updatedDate = defaults.valueForKey(Constants.UserDefaults.NewsUpdated)
+        var params = JSONDictionary()
+        if updatedDate != nil {
+            params["updated"] = updatedDate as! String
+        }
+        enqueueRequest(.GET, .News, params: params, onSuccessResponse: { responseString in
             let newsFeed = OLNewsFeed(jsonString: responseString)
             onSuccess(newsFeed)
             }, onErrorMessage: onError)
     }
     
     func fetchGallery(onSuccessGallery onSuccess: OnGallery, onError: OnErrorMessage) {
-        enqueueRequest(.GET, .Gallery, onSuccessResponse: { _ in
-            
+        enqueueRequest(.GET, .Gallery, params: ["news_id" : "43"], onSuccessResponse: { response in
+            let galleryItems = OLGallery(jsonString: response)
+            onSuccess(galleryItems)
+            }, onErrorMessage: onError)
+    }
+    
+    func fetchVideos(onSuccessVideos onSucess: OnVideos, onError: OnErrorMessage) {
+        enqueueRequest(.GET, .Videos, onSuccessResponse: { response in
+            let videos = OLVideos(jsonString: response)
+            onSucess(videos)
             }, onErrorMessage: onError)
     }
 }

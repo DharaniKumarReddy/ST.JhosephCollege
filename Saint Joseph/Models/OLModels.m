@@ -12,7 +12,7 @@
 
 @end
 
-@implementation OLNews
+@implementation OLVideos
 
 @end
 
@@ -21,5 +21,9 @@
 @end
 
 @implementation OLImageItem
+
+@end
+
+@implementation OLVideo
 
 @end

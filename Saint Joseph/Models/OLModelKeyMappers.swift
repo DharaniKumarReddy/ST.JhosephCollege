@@ -33,17 +33,6 @@ import Foundation
 //    }
 //}
 
-extension OLNews {
-    override public class func keyMapper() -> JSONKeyMapper {
-        return JSONKeyMapper(dictionary: [
-            "description" : "descript",
-            "updated_at" : "updatedAt",
-            "simg" : "smallImageURL",
-            "limg" : "largeImageURL"
-            ])
-    }
-}
-
 extension OLGallery {
     override public class func keyMapper() -> JSONKeyMapper {
         return JSONKeyMapper(dictionary: [
@@ -60,6 +49,17 @@ extension OLImageItem {
     }
 }
 
+extension OLVideo {
+    override public class func keyMapper() -> JSONKeyMapper {
+        return JSONKeyMapper(dictionary: [
+            "v_title"                    : "title",
+            "v_id"                      : "videoID",
+            "v_date"                  : "videoDate",
+            "v_description"       : "videoDescription",
+            "updated_at"          : "updatedAt"
+            ])
+    }
+}
 
 
 

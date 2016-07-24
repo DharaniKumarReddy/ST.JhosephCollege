@@ -13,15 +13,21 @@ class BaseViewController: UIViewController {
     
     var result: [NewsData]!
     
+    let formatter = NSDateFormatter()
+    
     private var newsEventsData = [NSManagedObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         fetchNewsFeed()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
     // MARK:- Save Core Data
     
     private func saveData(news: NSArray) {
@@ -31,8 +37,6 @@ class BaseViewController: UIViewController {
         let entity = NSEntityDescription.entityForName("News", inManagedObjectContext: managedContext)
         var newsDataObjects = [NewsData]()
         
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         for i in 0...news.count-1 {
             let newsData: NewsData = NewsData(entity: entity!, insertIntoManagedObjectContext: managedContext)
             let newsEvents = news[i] as! NSDictionary
@@ -48,6 +52,9 @@ class BaseViewController: UIViewController {
         }
         do {
             try managedContext.save()
+            let date = formatter.stringFromDate(NSDate())
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject(date, forKey: Constants.UserDefaults.NewsUpdated)
         } catch let error as NSError  {
             print("Could not save \(error), \(error.userInfo)")
         }
@@ -63,16 +70,12 @@ class BaseViewController: UIViewController {
     // MARK:- API Caller Method
     
     private func fetchNewsFeed() {
-        let taskGroup = dispatch_group_create()
-        dispatch_group_enter(taskGroup)
         APICaller.getInstance().fetchNews(
             onSuccessNews: { newsFeed in
-                dispatch_group_leave(taskGroup)
                 self.saveData(newsFeed.sjec_news)
-                self.performSegueWithIdentifier("SlidingViewControllerSegue", sender: self)
+                self.performSegueWithIdentifier(Constants.SegueIdentifier.SlidingViewControllerSegue, sender: self)
             }, onError: { _ in
-                dispatch_group_leave(taskGroup)
-                self.performSegueWithIdentifier("SlidingViewControllerSegue", sender: self)
+                self.performSegueWithIdentifier(Constants.SegueIdentifier.SlidingViewControllerSegue, sender: self)
         })
     }
     
@@ -80,7 +83,7 @@ class BaseViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier! {
-        case "SlidingViewControllerSegue":
+        case Constants.SegueIdentifier.SlidingViewControllerSegue:
             let slidingViewController = segue.destinationViewController as! SlidingViewController
             setupSlidingViewController(slidingViewController)
         default:

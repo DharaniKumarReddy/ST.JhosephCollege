@@ -20,9 +20,6 @@
 		05267F191D39EF930026130E /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F181D39EF930026130E /* CollectionViewTableViewCell.swift */; };
 		05267F1A1D39EF930026130E /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F181D39EF930026130E /* CollectionViewTableViewCell.swift */; };
 		05267F1B1D39EF930026130E /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F181D39EF930026130E /* CollectionViewTableViewCell.swift */; };
-		05267F1D1D39F8550026130E /* GalleryViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F1C1D39F8550026130E /* GalleryViewControllerExtension.swift */; };
-		05267F1E1D39F8550026130E /* GalleryViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F1C1D39F8550026130E /* GalleryViewControllerExtension.swift */; };
-		05267F1F1D39F8550026130E /* GalleryViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F1C1D39F8550026130E /* GalleryViewControllerExtension.swift */; };
 		05267F221D3B28000026130E /* SJDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05267F201D3B28000026130E /* SJDataModel.xcdatamodeld */; };
 		05267F231D3B28000026130E /* SJDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05267F201D3B28000026130E /* SJDataModel.xcdatamodeld */; };
 		05267F241D3B28000026130E /* SJDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05267F201D3B28000026130E /* SJDataModel.xcdatamodeld */; };
@@ -72,7 +69,13 @@
 		05D896AF1D38904E0038D8BD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05D896AB1D38904E0038D8BD /* Info.plist */; };
 		05DF47EE1D407C200073D21A /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267EFC1D39CDE70026130E /* EventsViewController.swift */; };
 		05DF47EF1D407C210073D21A /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267EFC1D39CDE70026130E /* EventsViewController.swift */; };
-		5BE3A4C1723F467DD3C4DDDD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7BBFE70484F4675AA1A87A /* libPods.a */; };
+		05ED9BC81D4355E500AABB0F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED9BC71D4355E500AABB0F /* ImageCollectionViewCell.swift */; };
+		05ED9BC91D4355E500AABB0F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED9BC71D4355E500AABB0F /* ImageCollectionViewCell.swift */; };
+		05ED9BCA1D4355E500AABB0F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED9BC71D4355E500AABB0F /* ImageCollectionViewCell.swift */; };
+		05ED9BCD1D43860100AABB0F /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED9BCC1D43860100AABB0F /* YoutubeViewController.swift */; };
+		05ED9BCE1D43860100AABB0F /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED9BCC1D43860100AABB0F /* YoutubeViewController.swift */; };
+		05ED9BCF1D43860100AABB0F /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED9BCC1D43860100AABB0F /* YoutubeViewController.swift */; };
+		52C92D2B8F2255A9383EA235 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF644153B648A9349DFE8E08 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +105,6 @@
 		05267F161D39DFBB0026130E /* OLGallery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OLGallery.h; path = Models/ObjC/OLGallery.h; sourceTree = "<group>"; };
 		05267F171D39DFD30026130E /* OLImageItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OLImageItem.h; path = Models/ObjC/OLImageItem.h; sourceTree = "<group>"; };
 		05267F181D39EF930026130E /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewTableViewCell.swift; path = Gallery/CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
-		05267F1C1D39F8550026130E /* GalleryViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryViewControllerExtension.swift; path = Gallery/GalleryViewControllerExtension.swift; sourceTree = "<group>"; };
 		05267F211D3B28000026130E /* SJDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SJDataModel.xcdatamodel; sourceTree = "<group>"; };
 		05267F621D3B67680026130E /* NSManagedObjectContextExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSManagedObjectContextExtension.swift; path = Extensions/NSManagedObjectContextExtension.swift; sourceTree = "<group>"; };
 		05267F681D3B6C860026130E /* NewsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsData.swift; path = "Core Data/NewsData.swift"; sourceTree = "<group>"; };
@@ -127,7 +129,6 @@
 		05C801601D3956CA0010DA3A /* OLModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OLModel.m; path = Models/OLModel.m; sourceTree = "<group>"; };
 		05C801641D3957950010DA3A /* OLModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OLModels.h; path = Models/OLModels.h; sourceTree = "<group>"; };
 		05C801651D3957B50010DA3A /* OLModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OLModels.m; path = Models/OLModels.m; sourceTree = "<group>"; };
-		05C8016B1D3958530010DA3A /* OLNews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OLNews.h; path = Models/ObjC/OLNews.h; sourceTree = "<group>"; };
 		05C8016C1D3959D00010DA3A /* OLNewsFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OLNewsFeed.h; path = Models/ObjC/OLNewsFeed.h; sourceTree = "<group>"; };
 		05C8016D1D395D9D0010DA3A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "../../../Library/Developer/Xcode/DerivedData/Saint_Joseph-guupgitdbkesnzcfjdfnrkdmkesp/Build/Products/Debug-iphonesimulator/libPods.a"; sourceTree = "<group>"; };
 		05C8016F1D395E020010DA3A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -152,9 +153,13 @@
 		05D896A61D388FF90038D8BD /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStoryboardExtensions.swift; path = Extensions/UIStoryboardExtensions.swift; sourceTree = "<group>"; };
 		05D896AB1D38904E0038D8BD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		05D896AC1D38904E0038D8BD /* Saint Joseph-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Saint Joseph-Bridging-Header.h"; path = "Supporting Files/Saint Joseph-Bridging-Header.h"; sourceTree = "<group>"; };
-		AD7BBFE70484F4675AA1A87A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		05E2B9591D432A9100CB3112 /* OLVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OLVideo.h; path = Models/ObjC/OLVideo.h; sourceTree = "<group>"; };
+		05EAC5581D41C7A300EE3080 /* OLVideos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OLVideos.h; path = Models/ObjC/OLVideos.h; sourceTree = "<group>"; };
+		05ED9BC71D4355E500AABB0F /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCollectionViewCell.swift; path = Gallery/ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		05ED9BCC1D43860100AABB0F /* YoutubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YoutubeViewController.swift; path = Gallery/YoutubeViewController.swift; sourceTree = "<group>"; };
 		B0EBE9D0DE8676ADBCE185D1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E072C95922588CB26A4CF520 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EF644153B648A9349DFE8E08 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BE3A4C1723F467DD3C4DDDD /* libPods.a in Frameworks */,
+				52C92D2B8F2255A9383EA235 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +202,9 @@
 			children = (
 				05267F0D1D39DD680026130E /* Gallery.storyboard */,
 				05267F121D39DE2D0026130E /* GalleryViewController.swift */,
-				05267F1C1D39F8550026130E /* GalleryViewControllerExtension.swift */,
 				05267F181D39EF930026130E /* CollectionViewTableViewCell.swift */,
+				05ED9BC71D4355E500AABB0F /* ImageCollectionViewCell.swift */,
+				05ED9BCC1D43860100AABB0F /* YoutubeViewController.swift */,
 			);
 			name = Gallery;
 			sourceTree = "<group>";
@@ -307,9 +313,10 @@
 			isa = PBXGroup;
 			children = (
 				05C8016C1D3959D00010DA3A /* OLNewsFeed.h */,
-				05C8016B1D3958530010DA3A /* OLNews.h */,
 				05267F161D39DFBB0026130E /* OLGallery.h */,
 				05267F171D39DFD30026130E /* OLImageItem.h */,
+				05EAC5581D41C7A300EE3080 /* OLVideos.h */,
+				05E2B9591D432A9100CB3112 /* OLVideo.h */,
 			);
 			name = ObjC;
 			sourceTree = "<group>";
@@ -365,7 +372,7 @@
 				05C801711D395E180010DA3A /* UIKit.framework */,
 				05C8016F1D395E020010DA3A /* Foundation.framework */,
 				05C8016D1D395D9D0010DA3A /* libPods.a */,
-				AD7BBFE70484F4675AA1A87A /* libPods.a */,
+				EF644153B648A9349DFE8E08 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -550,7 +557,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05267F1D1D39F8550026130E /* GalleryViewControllerExtension.swift in Sources */,
 				05267F631D3B67680026130E /* NSManagedObjectContextExtension.swift in Sources */,
 				05C801611D3956CA0010DA3A /* OLModel.m in Sources */,
 				05267F131D39DE2D0026130E /* GalleryViewController.swift in Sources */,
@@ -565,9 +571,11 @@
 				05C801591D39495E0010DA3A /* StringExtensions.swift in Sources */,
 				05C801941D39625C0010DA3A /* OLModelKeyMappers.swift in Sources */,
 				05267F221D3B28000026130E /* SJDataModel.xcdatamodeld in Sources */,
+				05ED9BC81D4355E500AABB0F /* ImageCollectionViewCell.swift in Sources */,
 				05D896A71D388FF90038D8BD /* UIStoryboardExtensions.swift in Sources */,
 				05D896981D388FCB0038D8BD /* BaseViewController.swift in Sources */,
 				05267F191D39EF930026130E /* CollectionViewTableViewCell.swift in Sources */,
+				05ED9BCD1D43860100AABB0F /* YoutubeViewController.swift in Sources */,
 				05D8969E1D388FCB0038D8BD /* SlidingViewController.swift in Sources */,
 				05267EFD1D39CDE70026130E /* EventsViewController.swift in Sources */,
 				05267F011D39CE2B0026130E /* NewsViewController.swift in Sources */,
@@ -586,16 +594,17 @@
 				05267F021D39CE2F0026130E /* NewsViewController.swift in Sources */,
 				05267F141D39DE2D0026130E /* GalleryViewController.swift in Sources */,
 				05D8969F1D388FCB0038D8BD /* SlidingViewController.swift in Sources */,
+				05ED9BCE1D43860100AABB0F /* YoutubeViewController.swift in Sources */,
 				056CF4571D3BB5F20014BAB2 /* NewsData.swift in Sources */,
 				05C801511D3942CB0010DA3A /* APICaller.swift in Sources */,
 				05267F231D3B28000026130E /* SJDataModel.xcdatamodeld in Sources */,
 				05C8015A1D39495E0010DA3A /* StringExtensions.swift in Sources */,
 				05267F1A1D39EF930026130E /* CollectionViewTableViewCell.swift in Sources */,
-				05267F1E1D39F8550026130E /* GalleryViewControllerExtension.swift in Sources */,
 				05D896A81D388FF90038D8BD /* UIStoryboardExtensions.swift in Sources */,
 				05D896991D388FCB0038D8BD /* BaseViewController.swift in Sources */,
 				05D8969C1D388FCB0038D8BD /* MenuViewController.swift in Sources */,
 				05DF47EE1D407C200073D21A /* EventsViewController.swift in Sources */,
+				05ED9BC91D4355E500AABB0F /* ImageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,16 +620,17 @@
 				05267F031D39CE300026130E /* NewsViewController.swift in Sources */,
 				05267F151D39DE2D0026130E /* GalleryViewController.swift in Sources */,
 				05D896A01D388FCB0038D8BD /* SlidingViewController.swift in Sources */,
+				05ED9BCF1D43860100AABB0F /* YoutubeViewController.swift in Sources */,
 				056CF4581D3BB5F30014BAB2 /* NewsData.swift in Sources */,
 				05C801521D3942CB0010DA3A /* APICaller.swift in Sources */,
 				05267F241D3B28000026130E /* SJDataModel.xcdatamodeld in Sources */,
 				05C8015B1D39495E0010DA3A /* StringExtensions.swift in Sources */,
 				05267F1B1D39EF930026130E /* CollectionViewTableViewCell.swift in Sources */,
-				05267F1F1D39F8550026130E /* GalleryViewControllerExtension.swift in Sources */,
 				05D896A91D388FF90038D8BD /* UIStoryboardExtensions.swift in Sources */,
 				05D8969A1D388FCB0038D8BD /* BaseViewController.swift in Sources */,
 				05D8969D1D388FCB0038D8BD /* MenuViewController.swift in Sources */,
 				05DF47EF1D407C210073D21A /* EventsViewController.swift in Sources */,
+				05ED9BCA1D4355E500AABB0F /* ImageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,6 +758,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Saint Joseph/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -764,6 +778,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Saint Joseph/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

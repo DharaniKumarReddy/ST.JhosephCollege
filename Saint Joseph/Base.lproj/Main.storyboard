@@ -77,6 +77,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8QY-Ad-UF6">
                                 <rect key="frame" x="0.0" y="316" width="160" height="126"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="Tyq-Kf-2ck" kind="push" identifier="VideosSegue" id="hb3-Os-jyq"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videos" translatesAutoresizingMaskIntoConstraints="NO" id="gYZ-MT-4gW">
                                 <rect key="frame" x="56" y="339" width="48" height="48"/>
@@ -432,17 +435,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfd-Uc-qYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="483.5" y="863"/>
-        </scene>
-        <!--Announcements-->
-        <scene sceneID="Zzc-aj-hbh">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Announcements" id="lko-Cr-1wz" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="JhF-fd-afS"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bDV-lL-bT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="523.5" y="915"/>
+            <point key="canvasLocation" x="530.5" y="866"/>
         </scene>
         <!--News-->
         <scene sceneID="pi1-5s-h2V">
@@ -462,7 +455,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXo-QY-BxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="593.5" y="967"/>
+            <point key="canvasLocation" x="601.5" y="910"/>
         </scene>
     </scenes>
     <resources>
@@ -479,5 +472,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VFF-FA-hno"/>
+        <segue reference="H6E-pb-HRR"/>
     </inferredMetricsTieBreakers>
 </document>

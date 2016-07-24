@@ -7,6 +7,7 @@
 //
 
 #import "OLNewsFeed.h"
-#import "OLNews.h"
 #import "OLGallery.h"
 #import "OLImageItem.h"
+#import "OLVideos.h"
+#import "OLVideo.h"

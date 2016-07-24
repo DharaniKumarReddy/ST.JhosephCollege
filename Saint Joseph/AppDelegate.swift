@@ -108,3 +108,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+extension NSURLRequest {
+    static func allowsAnyHTTPSCertificateForHost(host: String) -> Bool {
+        return true
+    }}

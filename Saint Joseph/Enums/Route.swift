@@ -14,6 +14,7 @@ let PHP = ".php"
 enum Route {
     case News               //GET
     case Gallery             //GET
+    case Videos             //GET
     
     var absoluteURL: NSURL {
         return NSURL(string: BASEURL + apiPath + PHP)!
@@ -25,6 +26,8 @@ enum Route {
             return "news"
         case.Gallery:
             return "images"
+        case .Videos:
+            return "videos"
         }
     }
     
@@ -34,6 +37,8 @@ enum Route {
             return "News has been watched"
         case.Gallery:
             return "Gallery has been watched"
+        case .Videos:
+            return "Videos has been watched"
         }
     }
     
