@@ -30,12 +30,15 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK:- UITableViewDataSource Methods
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return controllerType == .Events ? events.count : 4
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if controllerType == .Events {
-            let cell = tableView.dequeueReusableCellWithIdentifier(Constants.CellIdentifier.EventsCell)!
+            let cell = tableView.dequeueReusableCellWithIdentifier(Constants.CellIdentifier.EventsCell)! as! EventsCell
+            cell.event = events[indexPath.row]
+            cell.fillEventsData()
+            cell.tag = indexPath.row
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier(Constants.CellIdentifier.AnnouncementsCell)!

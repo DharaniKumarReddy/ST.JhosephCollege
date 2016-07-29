@@ -388,9 +388,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="k7a-KH-ybL">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WMA-wu-whA">
+                                <rect key="frame" x="142" y="265" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="WMA-wu-whA" firstAttribute="centerX" secondItem="LrK-AQ-wXe" secondAttribute="centerX" id="1gF-UE-dyD"/>
+                            <constraint firstItem="WMA-wu-whA" firstAttribute="centerY" secondItem="LrK-AQ-wXe" secondAttribute="centerY" id="6XG-1o-z0C"/>
                             <constraint firstItem="JzX-ex-LNV" firstAttribute="top" secondItem="k7a-KH-ybL" secondAttribute="bottom" id="DUZ-DB-aZV"/>
                             <constraint firstItem="k7a-KH-ybL" firstAttribute="top" secondItem="LrK-AQ-wXe" secondAttribute="top" id="jO2-bJ-E61"/>
                             <constraint firstItem="k7a-KH-ybL" firstAttribute="leading" secondItem="LrK-AQ-wXe" secondAttribute="leading" id="uac-tv-Cbd"/>

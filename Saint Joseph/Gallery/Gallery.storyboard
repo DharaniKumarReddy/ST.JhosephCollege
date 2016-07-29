@@ -50,8 +50,9 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPl-Em-w4N">
                                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="119"/>
                                                                         <subviews>
-                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon" translatesAutoresizingMaskIntoConstraints="NO" id="mzf-jN-EAS">
+                                                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon" translatesAutoresizingMaskIntoConstraints="NO" id="mzf-jN-EAS">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="119"/>
+                                                                                <gestureRecognizers/>
                                                                             </imageView>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,6 +72,9 @@
                                                                 <constraint firstAttribute="trailing" secondItem="WPl-Em-w4N" secondAttribute="trailing" id="xsm-Rn-Sx7"/>
                                                                 <constraint firstItem="WPl-Em-w4N" firstAttribute="top" secondItem="2WY-m2-x47" secondAttribute="top" id="z2D-Ih-Kph"/>
                                                             </constraints>
+                                                            <connections>
+                                                                <outlet property="imageView" destination="mzf-jN-EAS" id="Xq3-xZ-ShO"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="VideoCollectionViewCell" reuseIdentifier="VideoCollectionViewCell" id="sTw-jS-CWX" customClass="VideoCollectionViewCell" customModule="Saint_Joseph" customModuleProvider="target">
                                                             <rect key="frame" x="160" y="0.0" width="160" height="119"/>
@@ -188,19 +192,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOD-29-Xbg">
-                                <rect key="frame" x="40" y="220" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3g7-z4-HaY">
+                                <rect key="frame" x="0.0" y="219" width="320" height="130"/>
+                                <subviews>
+                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOD-29-Xbg">
+                                        <rect key="frame" x="20" y="-70" width="310" height="200"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="oT9-HM-OdG"/>
+                                        </constraints>
+                                    </webView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="AGi-0q-Q3y"/>
-                                    <constraint firstAttribute="height" constant="128" id="oT9-HM-OdG"/>
+                                    <constraint firstAttribute="trailing" secondItem="BOD-29-Xbg" secondAttribute="trailing" constant="-10" id="Dab-jH-Etd"/>
+                                    <constraint firstAttribute="bottom" secondItem="BOD-29-Xbg" secondAttribute="bottom" id="Y5B-Yc-SgC"/>
+                                    <constraint firstItem="BOD-29-Xbg" firstAttribute="leading" secondItem="3g7-z4-HaY" secondAttribute="leading" constant="20" id="jux-Ak-YyI"/>
+                                    <constraint firstAttribute="height" constant="130" id="qQH-Cb-m0a"/>
                                 </constraints>
-                            </webView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BOD-29-Xbg" firstAttribute="centerX" secondItem="36r-hF-vCM" secondAttribute="centerX" id="TiP-2o-YH2"/>
-                            <constraint firstItem="BOD-29-Xbg" firstAttribute="centerY" secondItem="36r-hF-vCM" secondAttribute="centerY" id="ukS-GW-7H4"/>
+                            <constraint firstAttribute="trailing" secondItem="3g7-z4-HaY" secondAttribute="trailing" id="1i6-w1-jLL"/>
+                            <constraint firstItem="3g7-z4-HaY" firstAttribute="centerY" secondItem="36r-hF-vCM" secondAttribute="centerY" id="sSS-aN-7Dp"/>
+                            <constraint firstItem="3g7-z4-HaY" firstAttribute="leading" secondItem="36r-hF-vCM" secondAttribute="leading" id="uzZ-cS-lfN"/>
                         </constraints>
                     </view>
                     <connections>

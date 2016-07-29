@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnnouncementsCell" id="MHs-Hh-JVo">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnnouncementsCell" id="MHs-Hh-JVo" customClass="AnnouncementsCell" customModule="Saint_Joseph" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="320" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MHs-Hh-JVo" id="m6x-J9-zJj">
@@ -62,6 +62,9 @@
                                                             <rect key="frame" x="187" y="77" width="121" height="28"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <state key="normal" title="ADD TO CALENDAR"/>
+                                                            <connections>
+                                                                <action selector="addToCalendar:" destination="MHs-Hh-JVo" eventType="touchUpInside" id="oag-MX-28s"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -88,8 +91,12 @@
                                                 <constraint firstAttribute="trailing" secondItem="cw4-fw-E5e" secondAttribute="trailing" constant="4" id="uX8-Ko-Kgg"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptLabel" destination="NWs-Va-y6s" id="7RW-AI-Ll8"/>
+                                            <outlet property="titleLabel" destination="Thl-p6-Aga" id="vRl-Za-Zb5"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventsCell" id="B0f-pz-cTD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventsCell" id="B0f-pz-cTD" customClass="EventsCell" customModule="Saint_Joseph" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="202" width="320" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B0f-pz-cTD" id="LL4-Wz-bUJ">
@@ -101,10 +108,36 @@
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qhi-TY-ztW">
                                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfG-TC-KRS">
+                                                                    <rect key="frame" x="21" y="2" width="38" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8Z-0N-cKe">
+                                                                    <rect key="frame" x="20" y="58" width="40" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvl-oj-knx">
+                                                                    <rect key="frame" x="19" y="29" width="42" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
                                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="80" id="7Nw-qt-jWC"/>
                                                                 <constraint firstAttribute="width" constant="80" id="AAt-gY-VyZ"/>
+                                                                <constraint firstItem="mfG-TC-KRS" firstAttribute="top" secondItem="Qhi-TY-ztW" secondAttribute="top" constant="2" id="EIb-La-X0I"/>
+                                                                <constraint firstItem="Qvl-oj-knx" firstAttribute="centerY" secondItem="Qhi-TY-ztW" secondAttribute="centerY" id="SPm-Ox-mnG"/>
+                                                                <constraint firstItem="mfG-TC-KRS" firstAttribute="centerX" secondItem="Qhi-TY-ztW" secondAttribute="centerX" id="ajO-qy-ee8"/>
+                                                                <constraint firstItem="e8Z-0N-cKe" firstAttribute="centerX" secondItem="Qhi-TY-ztW" secondAttribute="centerX" id="bdt-Rx-2XN"/>
+                                                                <constraint firstItem="Qvl-oj-knx" firstAttribute="centerX" secondItem="Qhi-TY-ztW" secondAttribute="centerX" id="kaE-WK-Wef"/>
+                                                                <constraint firstAttribute="bottom" secondItem="e8Z-0N-cKe" secondAttribute="bottom" constant="2" id="lLQ-go-pqZ"/>
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ace Designers Ltd." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fMx-3n-WZZ">
@@ -130,6 +163,9 @@
                                                             <rect key="frame" x="187" y="77" width="121" height="28"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <state key="normal" title="ADD TO CALENDAR"/>
+                                                            <connections>
+                                                                <action selector="addToCalendar:" destination="B0f-pz-cTD" eventType="touchUpInside" id="6FV-Bn-BKQ"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -156,6 +192,13 @@
                                                 <constraint firstItem="91M-0i-1pv" firstAttribute="leading" secondItem="LL4-Wz-bUJ" secondAttribute="leading" constant="4" id="yvS-Gb-80i"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dayLabel" destination="Qvl-oj-knx" id="oTd-xD-wvM"/>
+                                            <outlet property="descriptLabel" destination="tdy-bs-T9h" id="LDQ-0H-lis"/>
+                                            <outlet property="monthLabel" destination="mfG-TC-KRS" id="uii-yY-0VE"/>
+                                            <outlet property="titleLabel" destination="fMx-3n-WZZ" id="bg5-pk-rqz"/>
+                                            <outlet property="yearLabel" destination="e8Z-0N-cKe" id="QZb-4I-M0w"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

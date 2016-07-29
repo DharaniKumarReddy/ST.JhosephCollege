@@ -8,23 +8,24 @@
 
 import UIKit
 import CoreData
+//import SwiftSpinner
 
 class BaseViewController: UIViewController {
     
     var result: [NewsData]!
-    
-    let formatter = NSDateFormatter()
     
     private var newsEventsData = [NSManagedObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         fetchNewsFeed()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     }
@@ -37,27 +38,30 @@ class BaseViewController: UIViewController {
         let entity = NSEntityDescription.entityForName("News", inManagedObjectContext: managedContext)
         var newsDataObjects = [NewsData]()
         
-        for i in 0...news.count-1 {
-            let newsData: NewsData = NewsData(entity: entity!, insertIntoManagedObjectContext: managedContext)
-            let newsEvents = news[i] as! NSDictionary
-          //  newsData.date =  formatter.dateFromString((newsEvents["date"] ?? "") as! String)
-            newsData.descript = newsEvents["description"] as! NSString
-            newsData.largeImageURL = newsEvents["limg"] as! NSString
-            newsData.smallImageURL = newsEvents["simg"] as! NSString
-            newsData.title = newsEvents["title"] as! NSString
-            newsData.type = newsEvents["type"] as! NSString
-            newsData.updatedAt = newsEvents["updated_at"] as! NSString
-            print(newsData)
-            newsDataObjects.append(newsData)
+        if news.count > 0 {
+            for i in 0...news.count-1 {
+                let newsData: NewsData = NewsData(entity: entity!, insertIntoManagedObjectContext: managedContext)
+                let newsEvents = news[i] as! NSDictionary
+                //  newsData.date =  formatter.dateFromString((newsEvents["date"] ?? "") as! String)
+                newsData.descript = newsEvents["description"] as! NSString
+                newsData.largeImageURL = newsEvents["limg"] as! NSString
+                newsData.smallImageURL = newsEvents["simg"] as! NSString
+                newsData.title = newsEvents["title"] as! NSString
+                newsData.type = newsEvents["type"] as! NSString
+                newsData.updatedAt = newsEvents["updated_at"] as! NSString
+                print(newsData)
+                newsDataObjects.append(newsData)
+            }
+            do {
+                try managedContext.save()
+                let date = DateFormatter.defaultFormatter().stringFromDate(NSDate())
+                let defaults = NSUserDefaults.standardUserDefaults()
+                defaults.setObject(date, forKey: Constants.UserDefaults.NewsUpdated)
+            } catch let error as NSError  {
+                print("Could not save \(error), \(error.userInfo)")
+            }
         }
-        do {
-            try managedContext.save()
-            let date = formatter.stringFromDate(NSDate())
-            let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setObject(date, forKey: Constants.UserDefaults.NewsUpdated)
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-        }
+        
         let fetchRequest = NSFetchRequest(entityName: "News")
         do {
             result = try managedContext.executeFetchRequest(fetchRequest) as! [NewsData]
@@ -75,6 +79,7 @@ class BaseViewController: UIViewController {
                 self.saveData(newsFeed.sjec_news)
                 self.performSegueWithIdentifier(Constants.SegueIdentifier.SlidingViewControllerSegue, sender: self)
             }, onError: { _ in
+                self.saveData(NSArray())
                 self.performSegueWithIdentifier(Constants.SegueIdentifier.SlidingViewControllerSegue, sender: self)
         })
     }

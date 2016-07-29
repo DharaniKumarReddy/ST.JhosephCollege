@@ -31,6 +31,10 @@ class ViewController: UIViewController {
             newsViewController.news = news
         case Constants.SegueIdentifier.EventsSegue, Constants.SegueIdentifier.AnnouncementsSegue:
             let eventsController = segue.destinationViewController as! EventsViewController
+            let events = news.filter {
+                $0.type == "2"
+            }
+            eventsController.events = events
             eventsController.controllerType = segue.identifier == Constants.SegueIdentifier.EventsSegue ? .Events : .Announcements
         case Constants.SegueIdentifier.GallerySegue, Constants.SegueIdentifier.VideosSegue:
             let galleryViewController = segue.destinationViewController as! GalleryViewController

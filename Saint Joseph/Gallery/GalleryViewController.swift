@@ -32,6 +32,7 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
             fetchVideos()
             videos = sampleVideos()
         }
+        navigationController!.navigationBar.tintColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
     }
     
@@ -109,6 +110,8 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         if controllerType == .Gallery {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Constants.CellIdentifier.GalleryCollectionViewCell, forIndexPath: indexPath) as! GalleryCollectionViewCell
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(GalleryViewController.imageTapped(_:)))
+            cell.imageView.addGestureRecognizer(tapGesture)
             return cell
         } else {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Constants.CellIdentifier.VideoCollectionViewCell, forIndexPath: indexPath) as! VideoCollectionViewCell
@@ -148,6 +151,32 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBAction private func hamburgerPressed(sender: UIBarButtonItem) {
         slidingViewController().anchorTopViewToRightAnimated(true)
+    }
+    
+    // MARK:- Tap Gesture Methods
+    
+    func imageTapped(sender: UITapGestureRecognizer) {
+        let imageView = sender.view as! UIImageView
+        let newImageView = UIImageView(image: imageView.image)
+        newImageView.frame = self.view.frame
+        newImageView.backgroundColor = .blackColor()
+        newImageView.contentMode = .ScaleAspectFit
+        newImageView.userInteractionEnabled = true
+        newImageView.alpha = 0
+        let tap = UITapGestureRecognizer(target: self, action: #selector(GalleryViewController.dismissFullscreenImage(_:)))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        UIView.animateWithDuration(0.3, animations: {
+            newImageView.alpha = 1
+            }, completion: nil)
+    }
+    
+    func dismissFullscreenImage(sender: UITapGestureRecognizer) {
+        UIView.animateWithDuration(0.3, animations: {
+            (sender.view as! UIImageView).alpha = 0
+            }, completion: { _ in
+                sender.view?.removeFromSuperview()
+        })
     }
     
     // MARK:- ChooseItem Method

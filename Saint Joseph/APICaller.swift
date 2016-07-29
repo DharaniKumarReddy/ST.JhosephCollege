@@ -143,7 +143,7 @@ class APICaller {
     }
     
     func fetchGallery(onSuccessGallery onSuccess: OnGallery, onError: OnErrorMessage) {
-        enqueueRequest(.GET, .Gallery, params: ["news_id" : "43"], onSuccessResponse: { response in
+        enqueueRequest(.GET, .Gallery, params: ["news_id" : "44"], onSuccessResponse: { response in
             let galleryItems = OLGallery(jsonString: response)
             onSuccess(galleryItems)
             }, onErrorMessage: onError)

@@ -18,6 +18,7 @@ class YoutubeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Play Video"
         let videoURL = "http://www.youtube.com/embed/" + videoID
         let htmlString = "<iframe width = \(videoPlayer.frame.width) height = \(videoPlayer.frame.height) src = \(videoURL)?\" frameborder=\"0\" allowfullscreen></iframe>"
         videoPlayer.loadHTMLString(htmlString, baseURL: NSBundle.mainBundle().bundleURL)
