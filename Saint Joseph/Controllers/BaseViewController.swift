@@ -14,12 +14,19 @@ class BaseViewController: UIViewController {
     
     var result: [NewsData]!
     
+    var lastUpdatedDate = NSDate(timeIntervalSince1970: 0)
+    
     private var newsEventsData = [NSManagedObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let updatedDate = defaults.valueForKey(Constants.UserDefaults.NewsUpdated)
+        if updatedDate != nil {
+            lastUpdatedDate = DateFormatter.defaultFormatter().dateFromString(updatedDate as! String)!
+        }
+        //fetchNewsFeed()
         
-        fetchNewsFeed()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -28,6 +35,7 @@ class BaseViewController: UIViewController {
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        self.performSegueWithIdentifier(Constants.SegueIdentifier.SlidingViewControllerSegue, sender: self)
     }
     // MARK:- Save Core Data
     
@@ -49,12 +57,16 @@ class BaseViewController: UIViewController {
                 newsData.title = newsEvents["title"] as! NSString
                 newsData.type = newsEvents["type"] as! NSString
                 newsData.updatedAt = newsEvents["updated_at"] as! NSString
+                let newDate = DateFormatter.defaultFormatter().dateFromString(newsData.updatedAt as String)
+                if newDate?.isGreaterThanDate(lastUpdatedDate) == true {
+                    lastUpdatedDate = newDate!
+                }
                 print(newsData)
                 newsDataObjects.append(newsData)
             }
             do {
                 try managedContext.save()
-                let date = DateFormatter.defaultFormatter().stringFromDate(NSDate())
+                let date = DateFormatter.defaultFormatter().stringFromDate(lastUpdatedDate)
                 let defaults = NSUserDefaults.standardUserDefaults()
                 defaults.setObject(date, forKey: Constants.UserDefaults.NewsUpdated)
             } catch let error as NSError  {
@@ -99,7 +111,6 @@ class BaseViewController: UIViewController {
     
     private func setupSlidingViewController(slidingViewController: SlidingViewController) {
         slidingViewController.topViewController = UIStoryboard(Constants.StoryBoard.Main).instantiateNavigationController(Constants.NavigationController.DashboardNavigationController)
-        ((slidingViewController.topViewController as! UINavigationController).viewControllers[0] as! ViewController).news = result
     }
 
 }

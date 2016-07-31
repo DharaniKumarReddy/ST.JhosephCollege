@@ -51,4 +51,17 @@ extension NSDate {
         components.second = -1
         return NSCalendar.currentCalendar().dateByAddingComponents(components, toDate: startOfDay, options: NSCalendarOptions())
     }
+    
+    func isGreaterThanDate(dateToCompare: NSDate) -> Bool {
+        //Declare Variables
+        var isGreater = false
+        
+        //Compare Values
+        if self.compare(dateToCompare) == NSComparisonResult.OrderedDescending {
+            isGreater = true
+        }
+        
+        //Return Result
+        return isGreater
+    }
 }

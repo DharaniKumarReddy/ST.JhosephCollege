@@ -7,19 +7,20 @@
 //
 
 import UIKit
-import YouTubePlayer
 
 class GalleryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, ChooseItem {
 
     var controllerType: ControllerType!
     
-    var videos: [OLVideo]!
+    var videos = [OLVideo]()
     
     var gallery: [OLImageItem]!
     
     enum ControllerType {
         case Gallery, Videos
     }
+    
+    @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,36 +31,12 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
         } else {
             title = Constants.Title.Videos
             fetchVideos()
-            videos = sampleVideos()
         }
         navigationController!.navigationBar.tintColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
     }
     
     // MARK:- API Caller Method
-    
-    
-    
-    func sampleVideos() -> [OLVideo] {
-        let video1 = OLVideo()
-        video1.id = "1"
-        video1.title = ""
-        video1.videoID = "Jig9vFzFmmo"
-        let video2 = OLVideo()
-        video2.id = "2"
-        video2.title = ""
-        video2.videoID = "baTldJdcpwM"
-        let video3 = OLVideo()
-        video3.id = "3"
-        video3.title = ""
-        video3.videoID = "B2pTQD4K4AU"
-        let video4 = OLVideo()
-        video4.id = "3"
-        video4.title = ""
-        video4.videoID = "vv8DUpGc-MQ"
-        
-        return [video1, video2, video3, video4]
-    }
     
     private func fetchGallery() {
         APICaller.getInstance().fetchGallery(
@@ -70,10 +47,11 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     private func fetchVideos() {
-        APICaller.getInstance().fetchVideos(onSuccessVideos: { videoData in
-            
+        APICaller.getInstance().fetchVideos(
+            onSuccessVideos: { videoData in
+                self.videos = videoData.sjec_videos as! [OLVideo]
+                self.tableView.reloadData()
             }, onError: { _ in
-            
         })
     }
     

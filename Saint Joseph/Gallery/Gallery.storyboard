@@ -175,6 +175,9 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO">
                         <color key="barTintColor" red="0.08235294118" green="0.39607843139999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                     </simulatedNavigationBarMetrics>
+                    <connections>
+                        <outlet property="tableView" destination="h97-Kr-cah" id="r97-ue-AXl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0x-aC-axy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
