@@ -5,12 +5,13 @@
         <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="largeImageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="smallImageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="News" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="News" positionX="-63" positionY="-18" width="128" height="180"/>
     </elements>
 </model>

@@ -20,7 +20,9 @@ struct Constants {
     }
     
     struct  ViewControllerIdentifier {
-        static let YoutubeViewController = "YoutubeViewController"
+        static let YoutubeViewController     = "YoutubeViewController"
+        static let GalleryListViewController = "GalleryListViewController"
+        static let FullNewsViewController   = "FullNewsViewController"
     }
 
     struct ErrorMessage {
@@ -52,5 +54,6 @@ struct Constants {
         static let AnnouncementsCell            = "AnnouncementsCell"
         static let VideoCollectionViewCell     = "VideoCollectionViewCell"
         static let GalleryCollectionViewCell   = "GalleryCollectionViewCell"
+        static let FullNewsTableCell              = "FullNewsTableCell"
     }
 }

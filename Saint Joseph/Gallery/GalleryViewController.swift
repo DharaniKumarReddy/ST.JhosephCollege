@@ -8,9 +8,11 @@
 
 import UIKit
 
-class GalleryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, ChooseItem {
+class GalleryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, ChoosedItemDelegate {
 
     var controllerType: ControllerType!
+    
+    var news: [NewsData]!
     
     var videos = [OLVideo]()
     
@@ -27,23 +29,12 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
 
         if controllerType == .Gallery {
             title = Constants.Title.Gallery
-            fetchGallery()
         } else {
             title = Constants.Title.Videos
             fetchVideos()
         }
         navigationController!.navigationBar.tintColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
-    }
-    
-    // MARK:- API Caller Method
-    
-    private func fetchGallery() {
-        APICaller.getInstance().fetchGallery(
-            onSuccessGallery: { galleryItems in
-                print(galleryItems)
-            }, onError: { _ in
-        })
     }
     
     private func fetchVideos() {
@@ -63,7 +54,7 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return controllerType == .Gallery ? 2 : videos.count/2
+        return controllerType == .Gallery ? news.count/2 : videos.count/2
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -76,27 +67,28 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         // Adjust cell size for orientation
         let width = UIScreen.mainScreen().bounds.width / 2
-        return CGSizeMake(width, 119.0);
+        return CGSizeMake(width, 150.0);
     }
     
     // MARK:- UICollectionView DataSource Methods
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return news.count - (collectionView.tag * 2) < 2 ? 1 : 2
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let indexNumber = (collectionView.tag * 1) + (collectionView.tag + indexPath.row)
+        
         if controllerType == .Gallery {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Constants.CellIdentifier.GalleryCollectionViewCell, forIndexPath: indexPath) as! GalleryCollectionViewCell
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(GalleryViewController.imageTapped(_:)))
-            cell.imageView.addGestureRecognizer(tapGesture)
+            updateImage(news[indexNumber].largeImageURL!, indexPath: indexPath, collectionView: collectionView)
             return cell
         } else {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Constants.CellIdentifier.VideoCollectionViewCell, forIndexPath: indexPath) as! VideoCollectionViewCell
             cell.delegate = self
-            let videoNumber = (collectionView.tag * 1) + (collectionView.tag + indexPath.row)
-            let video = videos[videoNumber]
-            cell.videoButton.tag = videoNumber
+            cell.videoButton.tag = indexNumber
+            let video = videos[indexNumber]
+            cell.title.text = video.title!
             updateImage(video.videoID, indexPath: indexPath, collectionView: collectionView)
             return cell
         }
@@ -104,7 +96,7 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func updateImage(imageID: String, indexPath: NSIndexPath, collectionView: UICollectionView) {
         // We should perform this in a background thread
-        let urlString = "http://img.youtube.com/vi/" + imageID + "/mqdefault.jpg"
+        let urlString = controllerType == .Videos ? "http://img.youtube.com/vi/" + imageID + "/mqdefault.jpg" : imageID
         let url = NSURL(string: urlString)!
         let request: NSURLRequest = NSURLRequest(URL: url)
         let mainQueue = NSOperationQueue.mainQueue()
@@ -114,8 +106,14 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
                 let image = UIImage(data: data!)
                 // Update the cell
                 dispatch_async(dispatch_get_main_queue(), {
-                    if let cellToUpdate = collectionView.cellForItemAtIndexPath(indexPath) as? VideoCollectionViewCell {
-                        cellToUpdate.imageView.image = image
+                    if self.controllerType == .Videos {
+                        if let cellToUpdate = collectionView.cellForItemAtIndexPath(indexPath) as? VideoCollectionViewCell {
+                            cellToUpdate.imageView.image = image
+                        }
+                    } else {
+                        if let cellToUpdate = collectionView.cellForItemAtIndexPath(indexPath) as? GalleryCollectionViewCell {
+                            cellToUpdate.imageView.image = image
+                        }
                     }
                 })
             }
@@ -131,30 +129,9 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
         slidingViewController().anchorTopViewToRightAnimated(true)
     }
     
-    // MARK:- Tap Gesture Methods
-    
-    func imageTapped(sender: UITapGestureRecognizer) {
-        let imageView = sender.view as! UIImageView
-        let newImageView = UIImageView(image: imageView.image)
-        newImageView.frame = self.view.frame
-        newImageView.backgroundColor = .blackColor()
-        newImageView.contentMode = .ScaleAspectFit
-        newImageView.userInteractionEnabled = true
-        newImageView.alpha = 0
-        let tap = UITapGestureRecognizer(target: self, action: #selector(GalleryViewController.dismissFullscreenImage(_:)))
-        newImageView.addGestureRecognizer(tap)
-        self.view.addSubview(newImageView)
-        UIView.animateWithDuration(0.3, animations: {
-            newImageView.alpha = 1
-            }, completion: nil)
-    }
-    
-    func dismissFullscreenImage(sender: UITapGestureRecognizer) {
-        UIView.animateWithDuration(0.3, animations: {
-            (sender.view as! UIImageView).alpha = 0
-            }, completion: { _ in
-                sender.view?.removeFromSuperview()
-        })
+    func pushGalleryList() {
+        let galleryListViewController = UIStoryboard(Constants.StoryBoard.Gallery).instantiateViewControllerWithIdentifier(Constants.ViewControllerIdentifier.GalleryListViewController) as! GalleryListViewController
+        navigationController?.pushViewController(galleryListViewController, animated: true)
     }
     
     // MARK:- ChooseItem Method

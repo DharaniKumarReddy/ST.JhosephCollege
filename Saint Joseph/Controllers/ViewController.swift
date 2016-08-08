@@ -15,10 +15,14 @@ class ViewController: UIViewController {
     
     var lastUpdatedDate = NSDate(timeIntervalSince1970: 0)
     
+    var managedObjectContext: NSManagedObjectContext!
+    
     private var newsEventsData = [NSManagedObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        managedObjectContext = appDelegate.managedObjectContext
         let defaults = NSUserDefaults.standardUserDefaults()
         let updatedDate = defaults.valueForKey(Constants.UserDefaults.NewsUpdated)
         if updatedDate != nil {
@@ -29,35 +33,38 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        fetchRequest()
+    }
+    
     // MARK:- Save Core Data
     
     private func saveData(news: NSArray) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        
-        let entity = NSEntityDescription.entityForName("News", inManagedObjectContext: managedContext)
         var newsDataObjects = [NewsData]()
         
         if news.count > 0 {
             for i in 0...news.count-1 {
-                let newsData: NewsData = NewsData(entity: entity!, insertIntoManagedObjectContext: managedContext)
+                let newsData = NSEntityDescription.insertNewObjectForEntityForName("News", inManagedObjectContext: managedObjectContext) as! NewsData
+
                 let newsEvents = news[i] as! NSDictionary
                 //  newsData.date =  formatter.dateFromString((newsEvents["date"] ?? "") as! String)
-                newsData.descript = newsEvents["description"] as! NSString
-                newsData.largeImageURL = newsEvents["limg"] as! NSString
-                newsData.smallImageURL = newsEvents["simg"] as! NSString
-                newsData.title = newsEvents["title"] as! NSString
-                newsData.type = newsEvents["type"] as! NSString
-                newsData.updatedAt = newsEvents["updated_at"] as! NSString
-                let newDate = DateFormatter.defaultFormatter().dateFromString(newsData.updatedAt as String)
+                newsData.id = newsEvents["id"] as? String
+                newsData.newsID = newsEvents["id"] as? String
+                newsData.descript = newsEvents["description"] as? String
+                newsData.largeImageURL = newsEvents["limg"] as? String
+                newsData.smallImageURL = newsEvents["simg"] as? String
+                newsData.title = newsEvents["title"] as? String
+                newsData.type = newsEvents["type"] as? String
+                newsData.updatedAt = newsEvents["updated_at"] as? String
+                let newDate = DateFormatter.defaultFormatter().dateFromString(newsData.updatedAt!)
                 if newDate?.isGreaterThanDate(lastUpdatedDate) == true {
                     lastUpdatedDate = newDate!
                 }
-                print(newsData)
                 newsDataObjects.append(newsData)
             }
             do {
-                try managedContext.save()
+                try self.managedObjectContext.save()
                 let date = DateFormatter.defaultFormatter().stringFromDate(lastUpdatedDate)
                 let defaults = NSUserDefaults.standardUserDefaults()
                 defaults.setObject(date, forKey: Constants.UserDefaults.NewsUpdated)
@@ -65,10 +72,13 @@ class ViewController: UIViewController {
                 print("Could not save \(error), \(error.userInfo)")
             }
         }
-        
+        fetchRequest()
+    }
+    
+    private func fetchRequest() {
         let fetchRequest = NSFetchRequest(entityName: "News")
         do {
-            result = try managedContext.executeFetchRequest(fetchRequest) as! [NewsData]
+            result = try managedObjectContext.executeFetchRequest(fetchRequest) as! [NewsData]
             print(result)
         } catch let fetchError as NSError {
             print("getGalleryForItem error: \(fetchError.localizedDescription)")
@@ -94,7 +104,10 @@ class ViewController: UIViewController {
         switch segue.identifier! {
         case Constants.SegueIdentifier.NewsSegue:
             let newsViewController = segue.destinationViewController as! NewsViewController
-            newsViewController.news = result
+            let news = result.filter {
+                $0.type == "1"
+            }
+            newsViewController.news = news
         case Constants.SegueIdentifier.EventsSegue, Constants.SegueIdentifier.AnnouncementsSegue:
             let eventsController = segue.destinationViewController as! EventsViewController
             let events = result.filter {
@@ -104,6 +117,10 @@ class ViewController: UIViewController {
             eventsController.controllerType = segue.identifier == Constants.SegueIdentifier.EventsSegue ? .Events : .Announcements
         case Constants.SegueIdentifier.GallerySegue, Constants.SegueIdentifier.VideosSegue:
             let galleryViewController = segue.destinationViewController as! GalleryViewController
+            let news = result.filter {
+                $0.type == "1"
+            }
+            galleryViewController.news = news
             galleryViewController.controllerType = segue.identifier == Constants.SegueIdentifier.GallerySegue ? .Gallery : .Videos
         default:
             print("Do nothing for other cases")

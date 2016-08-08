@@ -13,10 +13,12 @@ class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var videoButton: UIButton!
     
-    weak var delegate: ChooseItem?
+    weak var delegate: ChoosedItemDelegate?
 }
 
 class VideoCollectionViewCell: ImageCollectionViewCell {
+    
+    @IBOutlet weak var title: UILabel!
     
     @IBAction private func videoClicked(sender: UIButton) {
             delegate?.chooseSelectedItem(sender.tag)
@@ -25,8 +27,13 @@ class VideoCollectionViewCell: ImageCollectionViewCell {
 
 class GalleryCollectionViewCell: ImageCollectionViewCell {
     
+    @IBOutlet weak var title: UILabel!
+    
+    @IBAction private func imageClicked(sender: UIButton) {
+        delegate?.chooseSelectedItem(sender.tag)
+    }
 }
 
-protocol ChooseItem: class {
+protocol ChoosedItemDelegate: class {
     func chooseSelectedItem(tag: Int)
 }

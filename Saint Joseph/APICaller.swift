@@ -68,10 +68,29 @@ class APICaller {
                 for (key, value) in params {
                     queryItems.append(NSURLQueryItem(name: "\(key)".urlEscapedString(), value: "\(value)".urlEscapedString()))
                 }
-            default:
-                break
+                if queryItems.count > 0 {
+                    let components = NSURLComponents(URL: request.URL!, resolvingAgainstBaseURL: false)
+                    components?.queryItems = queryItems
+                    components?.percentEncodedQuery = components?.percentEncodedQuery?.stringByReplacingOccurrencesOfString("%25", withString: "%", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                    
+                    request.URL = components?.URL
+                }
+            case .POST, .PUT:
+                var error: NSError?
+                do {
+                    let body = try NSJSONSerialization.dataWithJSONObject(params, options: [])
+                    request.HTTPBody = body
+                } catch let error1 as NSError {
+                    error = error1
+                    if let errorMessage = error?.localizedDescription {
+                        print(errorMessage)
+                    } else {
+                        print("Unexpected JSON Parse Error requestWithOperation: \(requestMethod) \(route.absoluteURL)")
+                    }
+                }
             }
         }
+//        print("Response URL-> \(request)")
         return request
     }
     
@@ -87,7 +106,6 @@ class APICaller {
                     statusCode = 450
                 }
               //  logResponse(httpResponse, request: urlRequest, responseString: responseString)
-                print("Response URL-> \(urlRequest)")
                 print(responseString)
                 switch statusCode {
                 case 200...299:
@@ -136,7 +154,7 @@ class APICaller {
         if updatedDate != nil {
             params["updated"] = updatedDate as! String
         }
-        enqueueRequest(.GET, .News, params: params, onSuccessResponse: { responseString in
+        enqueueRequest(.POST, .News, params: params, onSuccessResponse: { responseString in
             let newsFeed = OLNewsFeed(jsonString: responseString)
             onSuccess(newsFeed)
             }, onErrorMessage: onError)

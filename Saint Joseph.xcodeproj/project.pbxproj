@@ -35,12 +35,24 @@
 		05555F931D2A041A00FBC31C /* Saint_JosephUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05555F921D2A041A00FBC31C /* Saint_JosephUITests.swift */; };
 		056CF4571D3BB5F20014BAB2 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F681D3B6C860026130E /* NewsData.swift */; };
 		056CF4581D3BB5F30014BAB2 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F681D3B6C860026130E /* NewsData.swift */; };
+		0570E7781D58DE76005E5C8C /* Contact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0570E7771D58DE76005E5C8C /* Contact.storyboard */; };
+		0570E7791D58DE76005E5C8C /* Contact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0570E7771D58DE76005E5C8C /* Contact.storyboard */; };
+		0570E77A1D58DE76005E5C8C /* Contact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0570E7771D58DE76005E5C8C /* Contact.storyboard */; };
+		0570E77D1D58DED1005E5C8C /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0570E77C1D58DED1005E5C8C /* ContactUsViewController.swift */; };
+		0570E77E1D58DED1005E5C8C /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0570E77C1D58DED1005E5C8C /* ContactUsViewController.swift */; };
+		0570E77F1D58DED1005E5C8C /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0570E77C1D58DED1005E5C8C /* ContactUsViewController.swift */; };
 		0580C9C91D4492FC00EB8525 /* EventsAnnouncementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0580C9C81D4492FC00EB8525 /* EventsAnnouncementsTableViewCell.swift */; };
 		0580C9CA1D4492FC00EB8525 /* EventsAnnouncementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0580C9C81D4492FC00EB8525 /* EventsAnnouncementsTableViewCell.swift */; };
 		0580C9CB1D4492FC00EB8525 /* EventsAnnouncementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0580C9C81D4492FC00EB8525 /* EventsAnnouncementsTableViewCell.swift */; };
 		0580C9D01D44A85400EB8525 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0580C9CF1D44A85400EB8525 /* DateFormatter.swift */; };
 		0580C9D11D44A85400EB8525 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0580C9CF1D44A85400EB8525 /* DateFormatter.swift */; };
 		0580C9D21D44A85400EB8525 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0580C9CF1D44A85400EB8525 /* DateFormatter.swift */; };
+		0599B6EE1D538577002E092B /* GalleryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599B6ED1D538577002E092B /* GalleryListViewController.swift */; };
+		0599B6EF1D538577002E092B /* GalleryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599B6ED1D538577002E092B /* GalleryListViewController.swift */; };
+		0599B6F01D538577002E092B /* GalleryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599B6ED1D538577002E092B /* GalleryListViewController.swift */; };
+		05B924DE1D57074700CD8C53 /* FullNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B924DD1D57074700CD8C53 /* FullNewsViewController.swift */; };
+		05B924DF1D57074700CD8C53 /* FullNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B924DD1D57074700CD8C53 /* FullNewsViewController.swift */; };
+		05B924E01D57074700CD8C53 /* FullNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B924DD1D57074700CD8C53 /* FullNewsViewController.swift */; };
 		05B9CC8A1D36A728001290A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC891D36A728001290A4 /* Constants.swift */; };
 		05B9CC8B1D36A728001290A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC891D36A728001290A4 /* Constants.swift */; };
 		05B9CC8C1D36A728001290A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9CC891D36A728001290A4 /* Constants.swift */; };
@@ -125,8 +137,12 @@
 		05555F8E1D2A041A00FBC31C /* Saint JosephUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Saint JosephUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05555F921D2A041A00FBC31C /* Saint_JosephUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saint_JosephUITests.swift; sourceTree = "<group>"; };
 		05555F941D2A041A00FBC31C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0570E7771D58DE76005E5C8C /* Contact.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Contact.storyboard; path = Contact/Contact.storyboard; sourceTree = "<group>"; };
+		0570E77C1D58DED1005E5C8C /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactUsViewController.swift; path = Contact/ContactUsViewController.swift; sourceTree = "<group>"; };
 		0580C9C81D4492FC00EB8525 /* EventsAnnouncementsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsAnnouncementsTableViewCell.swift; path = Events/EventsAnnouncementsTableViewCell.swift; sourceTree = "<group>"; };
 		0580C9CF1D44A85400EB8525 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = DateFormatter/DateFormatter.swift; sourceTree = "<group>"; };
+		0599B6ED1D538577002E092B /* GalleryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryListViewController.swift; path = Gallery/GalleryListViewController.swift; sourceTree = "<group>"; };
+		05B924DD1D57074700CD8C53 /* FullNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FullNewsViewController.swift; path = News/FullNewsViewController.swift; sourceTree = "<group>"; };
 		05B9CC891D36A728001290A4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		05C8014F1D3942CB0010DA3A /* APICaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		05C801541D3947920010DA3A /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Route.swift; path = Enums/Route.swift; sourceTree = "<group>"; };
@@ -211,6 +227,7 @@
 			children = (
 				05267F0D1D39DD680026130E /* Gallery.storyboard */,
 				05267F121D39DE2D0026130E /* GalleryViewController.swift */,
+				0599B6ED1D538577002E092B /* GalleryListViewController.swift */,
 				05267F181D39EF930026130E /* CollectionViewTableViewCell.swift */,
 				05ED9BC71D4355E500AABB0F /* ImageCollectionViewCell.swift */,
 				05ED9BCC1D43860100AABB0F /* YoutubeViewController.swift */,
@@ -255,6 +272,7 @@
 				05C801491D393C630010DA3A /* News */,
 				05267EFB1D39CDAE0026130E /* Events */,
 				05267F111D39DDBD0026130E /* Gallery */,
+				0570E77B1D58DEA9005E5C8C /* Contact */,
 				05555F721D2A041900FBC31C /* AppDelegate.swift */,
 				05C8014F1D3942CB0010DA3A /* APICaller.swift */,
 				05B9CC891D36A728001290A4 /* Constants.swift */,
@@ -289,6 +307,15 @@
 			path = "Saint JosephUITests";
 			sourceTree = "<group>";
 		};
+		0570E77B1D58DEA9005E5C8C /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				0570E7771D58DE76005E5C8C /* Contact.storyboard */,
+				0570E77C1D58DED1005E5C8C /* ContactUsViewController.swift */,
+			);
+			name = Contact;
+			sourceTree = "<group>";
+		};
 		0580C9CE1D44A82B00EB8525 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +329,7 @@
 			children = (
 				05267F071D39D98C0026130E /* News.storyboard */,
 				05267F001D39CE2B0026130E /* NewsViewController.swift */,
+				05B924DD1D57074700CD8C53 /* FullNewsViewController.swift */,
 			);
 			name = News;
 			sourceTree = "<group>";
@@ -517,6 +545,7 @@
 				05555F7A1D2A041900FBC31C /* Assets.xcassets in Resources */,
 				05555F781D2A041900FBC31C /* Main.storyboard in Resources */,
 				05267EFA1D39CD950026130E /* Events.storyboard in Resources */,
+				0570E7781D58DE76005E5C8C /* Contact.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +554,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05D896AE1D38904E0038D8BD /* Info.plist in Resources */,
+				0570E7791D58DE76005E5C8C /* Contact.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05D896AF1D38904E0038D8BD /* Info.plist in Resources */,
+				0570E77A1D58DE76005E5C8C /* Contact.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,7 +623,9 @@
 				0580C9D01D44A85400EB8525 /* DateFormatter.swift in Sources */,
 				05267F221D3B28000026130E /* SJDataModel.xcdatamodeld in Sources */,
 				05ED9BC81D4355E500AABB0F /* ImageCollectionViewCell.swift in Sources */,
+				0599B6EE1D538577002E092B /* GalleryListViewController.swift in Sources */,
 				05D896A71D388FF90038D8BD /* UIStoryboardExtensions.swift in Sources */,
+				05B924DE1D57074700CD8C53 /* FullNewsViewController.swift in Sources */,
 				05D896981D388FCB0038D8BD /* BaseViewController.swift in Sources */,
 				05267F191D39EF930026130E /* CollectionViewTableViewCell.swift in Sources */,
 				0580C9C91D4492FC00EB8525 /* EventsAnnouncementsTableViewCell.swift in Sources */,
@@ -600,6 +633,7 @@
 				05D8969E1D388FCB0038D8BD /* SlidingViewController.swift in Sources */,
 				05267EFD1D39CDE70026130E /* EventsViewController.swift in Sources */,
 				05267F011D39CE2B0026130E /* NewsViewController.swift in Sources */,
+				0570E77D1D58DED1005E5C8C /* ContactUsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,12 +652,15 @@
 				05D8969F1D388FCB0038D8BD /* SlidingViewController.swift in Sources */,
 				05ED9BCE1D43860100AABB0F /* YoutubeViewController.swift in Sources */,
 				056CF4571D3BB5F20014BAB2 /* NewsData.swift in Sources */,
+				0570E77E1D58DED1005E5C8C /* ContactUsViewController.swift in Sources */,
 				05C801511D3942CB0010DA3A /* APICaller.swift in Sources */,
 				05267F231D3B28000026130E /* SJDataModel.xcdatamodeld in Sources */,
 				05C8015A1D39495E0010DA3A /* StringExtensions.swift in Sources */,
 				05267F1A1D39EF930026130E /* CollectionViewTableViewCell.swift in Sources */,
+				0599B6EF1D538577002E092B /* GalleryListViewController.swift in Sources */,
 				05D896A81D388FF90038D8BD /* UIStoryboardExtensions.swift in Sources */,
 				0580C9D11D44A85400EB8525 /* DateFormatter.swift in Sources */,
+				05B924DF1D57074700CD8C53 /* FullNewsViewController.swift in Sources */,
 				05D896991D388FCB0038D8BD /* BaseViewController.swift in Sources */,
 				05D8969C1D388FCB0038D8BD /* MenuViewController.swift in Sources */,
 				05DF47EE1D407C200073D21A /* EventsViewController.swift in Sources */,
@@ -646,12 +683,15 @@
 				05D896A01D388FCB0038D8BD /* SlidingViewController.swift in Sources */,
 				05ED9BCF1D43860100AABB0F /* YoutubeViewController.swift in Sources */,
 				056CF4581D3BB5F30014BAB2 /* NewsData.swift in Sources */,
+				0570E77F1D58DED1005E5C8C /* ContactUsViewController.swift in Sources */,
 				05C801521D3942CB0010DA3A /* APICaller.swift in Sources */,
 				05267F241D3B28000026130E /* SJDataModel.xcdatamodeld in Sources */,
 				05C8015B1D39495E0010DA3A /* StringExtensions.swift in Sources */,
 				05267F1B1D39EF930026130E /* CollectionViewTableViewCell.swift in Sources */,
+				0599B6F01D538577002E092B /* GalleryListViewController.swift in Sources */,
 				05D896A91D388FF90038D8BD /* UIStoryboardExtensions.swift in Sources */,
 				0580C9D21D44A85400EB8525 /* DateFormatter.swift in Sources */,
+				05B924E01D57074700CD8C53 /* FullNewsViewController.swift in Sources */,
 				05D8969A1D388FCB0038D8BD /* BaseViewController.swift in Sources */,
 				05D8969D1D388FCB0038D8BD /* MenuViewController.swift in Sources */,
 				05DF47EF1D407C210073D21A /* EventsViewController.swift in Sources */,

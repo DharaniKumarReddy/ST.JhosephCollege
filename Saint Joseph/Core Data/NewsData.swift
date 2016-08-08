@@ -6,16 +6,19 @@
 //  Copyright © 2016 Dharani. All rights reserved.
 //
 
+import UIKit
 import Foundation
 import CoreData
 
 class NewsData: NSManagedObject {
-    var date: NSDate!
-    var descript: NSString!
-    var largeImageURL: NSString!
-    var smallImageURL: NSString!
-    var title: NSString!
-    var type: NSString!
-    var updatedAt: NSString!
-
+    
+    @NSManaged var date: NSDate?
+    @NSManaged var descript: String?
+    @NSManaged var id: String?
+    @NSManaged var largeImageURL: String?
+    @NSManaged var newsID: String?
+    @NSManaged var smallImageURL: String?
+    @NSManaged var title: String?
+    @NSManaged var type: String?
+    @NSManaged var updatedAt: String?
 }
