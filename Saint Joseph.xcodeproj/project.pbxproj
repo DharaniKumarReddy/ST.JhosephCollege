@@ -50,6 +50,9 @@
 		0599B6EE1D538577002E092B /* GalleryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599B6ED1D538577002E092B /* GalleryListViewController.swift */; };
 		0599B6EF1D538577002E092B /* GalleryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599B6ED1D538577002E092B /* GalleryListViewController.swift */; };
 		0599B6F01D538577002E092B /* GalleryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599B6ED1D538577002E092B /* GalleryListViewController.swift */; };
+		05A54C211D768D3100DD35F6 /* HtmlLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A54C201D768D3100DD35F6 /* HtmlLoaderViewController.swift */; };
+		05A54C221D768D3100DD35F6 /* HtmlLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A54C201D768D3100DD35F6 /* HtmlLoaderViewController.swift */; };
+		05A54C231D768D3100DD35F6 /* HtmlLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A54C201D768D3100DD35F6 /* HtmlLoaderViewController.swift */; };
 		05B924DE1D57074700CD8C53 /* FullNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B924DD1D57074700CD8C53 /* FullNewsViewController.swift */; };
 		05B924DF1D57074700CD8C53 /* FullNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B924DD1D57074700CD8C53 /* FullNewsViewController.swift */; };
 		05B924E01D57074700CD8C53 /* FullNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B924DD1D57074700CD8C53 /* FullNewsViewController.swift */; };
@@ -142,6 +145,7 @@
 		0580C9C81D4492FC00EB8525 /* EventsAnnouncementsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsAnnouncementsTableViewCell.swift; path = Events/EventsAnnouncementsTableViewCell.swift; sourceTree = "<group>"; };
 		0580C9CF1D44A85400EB8525 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = DateFormatter/DateFormatter.swift; sourceTree = "<group>"; };
 		0599B6ED1D538577002E092B /* GalleryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryListViewController.swift; path = Gallery/GalleryListViewController.swift; sourceTree = "<group>"; };
+		05A54C201D768D3100DD35F6 /* HtmlLoaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HtmlLoaderViewController.swift; path = Controllers/HtmlLoaderViewController.swift; sourceTree = "<group>"; };
 		05B924DD1D57074700CD8C53 /* FullNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FullNewsViewController.swift; path = News/FullNewsViewController.swift; sourceTree = "<group>"; };
 		05B9CC891D36A728001290A4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		05C8014F1D3942CB0010DA3A /* APICaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
@@ -375,6 +379,7 @@
 				05D896951D388FCB0038D8BD /* MenuViewController.swift */,
 				05D896961D388FCB0038D8BD /* SlidingViewController.swift */,
 				05D896971D388FCB0038D8BD /* ViewController.swift */,
+				05A54C201D768D3100DD35F6 /* HtmlLoaderViewController.swift */,
 			);
 			name = DashBoard;
 			sourceTree = "<group>";
@@ -607,6 +612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05A54C211D768D3100DD35F6 /* HtmlLoaderViewController.swift in Sources */,
 				05267F631D3B67680026130E /* NSManagedObjectContextExtension.swift in Sources */,
 				05C801611D3956CA0010DA3A /* OLModel.m in Sources */,
 				05267F131D39DE2D0026130E /* GalleryViewController.swift in Sources */,
@@ -653,6 +659,7 @@
 				05ED9BCE1D43860100AABB0F /* YoutubeViewController.swift in Sources */,
 				056CF4571D3BB5F20014BAB2 /* NewsData.swift in Sources */,
 				0570E77E1D58DED1005E5C8C /* ContactUsViewController.swift in Sources */,
+				05A54C221D768D3100DD35F6 /* HtmlLoaderViewController.swift in Sources */,
 				05C801511D3942CB0010DA3A /* APICaller.swift in Sources */,
 				05267F231D3B28000026130E /* SJDataModel.xcdatamodeld in Sources */,
 				05C8015A1D39495E0010DA3A /* StringExtensions.swift in Sources */,
@@ -684,6 +691,7 @@
 				05ED9BCF1D43860100AABB0F /* YoutubeViewController.swift in Sources */,
 				056CF4581D3BB5F30014BAB2 /* NewsData.swift in Sources */,
 				0570E77F1D58DED1005E5C8C /* ContactUsViewController.swift in Sources */,
+				05A54C231D768D3100DD35F6 /* HtmlLoaderViewController.swift in Sources */,
 				05C801521D3942CB0010DA3A /* APICaller.swift in Sources */,
 				05267F241D3B28000026130E /* SJDataModel.xcdatamodeld in Sources */,
 				05C8015B1D39495E0010DA3A /* StringExtensions.swift in Sources */,

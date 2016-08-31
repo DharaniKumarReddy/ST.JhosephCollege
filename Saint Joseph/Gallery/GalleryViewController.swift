@@ -64,10 +64,14 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
         return cell
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return controllerType == .Gallery ? 90 : 110
+    }
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         // Adjust cell size for orientation
         let width = UIScreen.mainScreen().bounds.width / 2
-        return CGSizeMake(width, 150.0);
+        return controllerType == .Gallery ? CGSizeMake(width, 90.0) : CGSizeMake(width, 110.0)
     }
     
     // MARK:- UICollectionView DataSource Methods

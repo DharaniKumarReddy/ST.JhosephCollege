@@ -14,7 +14,7 @@ typealias OnErrorMessage            = String -> Void
 typealias OnGallery                       = OLGallery -> Void
 typealias OnVideos                        = OLVideos -> Void
 typealias OnNewsFeed                 = OLNewsFeed -> Void
-typealias JSONDictionary              = [String : AnyObject]
+typealias JSONDictionary              = [String : String]
 
 private enum RequestMethod: String, CustomStringConvertible {
     case GET = "GET"
@@ -59,22 +59,12 @@ class APICaller {
         let request = NSMutableURLRequest(URL: route.absoluteURL)
         
         request.HTTPMethod = requestMethod.rawValue
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         
         if let params = params {
             switch requestMethod {
             case .GET, .DELETE:
-                var queryItems: [NSURLQueryItem] = []
-                
-                for (key, value) in params {
-                    queryItems.append(NSURLQueryItem(name: "\(key)".urlEscapedString(), value: "\(value)".urlEscapedString()))
-                }
-                if queryItems.count > 0 {
-                    let components = NSURLComponents(URL: request.URL!, resolvingAgainstBaseURL: false)
-                    components?.queryItems = queryItems
-                    components?.percentEncodedQuery = components?.percentEncodedQuery?.stringByReplacingOccurrencesOfString("%25", withString: "%", options: NSStringCompareOptions.LiteralSearch, range: nil)
-                    
-                    request.URL = components?.URL
-                }
+                break
             case .POST, .PUT:
                 var error: NSError?
                 do {
@@ -82,15 +72,15 @@ class APICaller {
                     request.HTTPBody = body
                 } catch let error1 as NSError {
                     error = error1
-                    if let errorMessage = error?.localizedDescription {
-                        print(errorMessage)
+                    if (error?.localizedDescription) != nil {
+                       // logError(errorMessage)
                     } else {
-                        print("Unexpected JSON Parse Error requestWithOperation: \(requestMethod) \(route.absoluteURL)")
+                        //logError("Unexpected JSON Parse Error requestWithOperation: \(requestMethod) \(route.absoluteURL)")
                     }
                 }
             }
         }
-//        print("Response URL-> \(request)")
+        print("Response URL-> \(request)")
         return request
     }
     
@@ -152,7 +142,7 @@ class APICaller {
         let updatedDate = defaults.valueForKey(Constants.UserDefaults.NewsUpdated)
         var params = JSONDictionary()
         if updatedDate != nil {
-            params["updated"] = updatedDate as! String
+            params["updated"] = "\(updatedDate!)"
         }
         enqueueRequest(.POST, .News, params: params, onSuccessResponse: { responseString in
             let newsFeed = OLNewsFeed(jsonString: responseString)

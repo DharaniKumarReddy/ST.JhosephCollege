@@ -79,7 +79,6 @@ class ViewController: UIViewController {
         let fetchRequest = NSFetchRequest(entityName: "News")
         do {
             result = try managedObjectContext.executeFetchRequest(fetchRequest) as! [NewsData]
-            print(result)
         } catch let fetchError as NSError {
             print("getGalleryForItem error: \(fetchError.localizedDescription)")
         }
@@ -93,7 +92,7 @@ class ViewController: UIViewController {
         APICaller.getInstance().fetchNews(
             onSuccessNews: { newsFeed in
                 dispatch_group_leave(taskGroup)
-                self.saveData(newsFeed.sjec_news)
+                self.saveData(newsFeed.sjpu_news)
             }, onError: { _ in
                 dispatch_group_leave(taskGroup)
                 self.saveData(NSArray())

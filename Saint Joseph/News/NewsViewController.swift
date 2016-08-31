@@ -27,6 +27,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction private func hamburgerPressed(sender: UIBarButtonItem) {
         slidingViewController().anchorTopViewToRightAnimated(true)
     }
+    
     // MARK:- UITableView Data Source Methods
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -47,7 +48,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         // Adjust cell size for orientation
         let width = UIScreen.mainScreen().bounds.width / 2
-        return CGSizeMake(width, 150.0);
+        return CGSizeMake(width, 124.0)
     }
     
     // MARK:- UICollectionView DataSource Methods

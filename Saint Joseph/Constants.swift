@@ -7,6 +7,13 @@
 //
 
 import Foundation
+
+let ACADEMICS_URL="http://sjpuc.in/sjpu_app/admissionprocedure.html";
+let ERP_URL="http://my-lyceum.net/MyLyceum/Home.aspx";
+let PRINCIPAL_MSG="http://sjpuc.in/sjpu_app/principals.html";
+let RECTOR_MSG="http://sjpuc.in/sjpu_app/rector.html"
+let COLLEGE_WEBSITE="http://www.sjpuc.in"
+
 struct Constants {
     
     struct StoryBoard {
@@ -16,13 +23,15 @@ struct Constants {
     }
     
     struct NavigationController {
-        static let DashboardNavigationController = "DashboardNavigationController"
+        static let DashboardNavigationController  = "DashboardNavigationController"
+        static let HtmlLoaderNavigationController = "HtmlLoaderNavigationController"
     }
     
     struct  ViewControllerIdentifier {
         static let YoutubeViewController     = "YoutubeViewController"
         static let GalleryListViewController = "GalleryListViewController"
         static let FullNewsViewController   = "FullNewsViewController"
+        static let HtmlLoaderViewController = "HtmlLoaderViewController"
     }
 
     struct ErrorMessage {

@@ -18,7 +18,9 @@ class MenuViewController: UIViewController {
     
     @IBAction private func menuButtons_Tapped(menuButton: UIButton) {
         switch menuButton.tag {
-        case 1:
+        case 1, 2, 4:
+            segueToViewControllerInStoryboard(Constants.StoryBoard.Main, navigationControllerIdentifier: Constants.NavigationController.HtmlLoaderNavigationController, tag: menuButton.tag)
+        case 3:
             segueToInitialViewControllerInStoryboard(Constants.StoryBoard.Main)
         default:
             return
@@ -27,7 +29,14 @@ class MenuViewController: UIViewController {
     
     func segueToInitialViewControllerInStoryboard(storyboardName: String) {
         let initialViewController = UIStoryboard(storyboardName).instantiateInitialViewController() as UIViewController!
-        let ecSlidingSegue = ECSlidingSegue(identifier: nil, source: self, destination: initialViewController) //identifier: nil, source: self, destination: initialViewController)
+        let ecSlidingSegue = ECSlidingSegue(identifier: nil, source: self, destination: initialViewController)
+        ecSlidingSegue.perform()
+    }
+    
+    func segueToViewControllerInStoryboard(storyboardName: String, navigationControllerIdentifier: String, tag: Int) {
+        let htmlNavigationController = UIStoryboard(storyboardName).instantiateNavigationController(navigationControllerIdentifier)
+        (htmlNavigationController.viewControllers[0] as! HtmlLoaderViewController).controllerType = tag == 1 ? .RectorMessage : tag == 2 ? .PrincipalMessage : .About
+        let ecSlidingSegue = ECSlidingSegue(identifier: nil, source: self, destination: htmlNavigationController)
         ecSlidingSegue.perform()
     }
 

@@ -10,7 +10,7 @@
 
 @interface OLNewsFeed : OLModel
 
-@property (nonatomic) NSArray *sjec_news;
+@property (nonatomic) NSArray *sjpu_news;
 @property (nonatomic) NSString *message;
 @property (nonatomic) NSInteger success;
 

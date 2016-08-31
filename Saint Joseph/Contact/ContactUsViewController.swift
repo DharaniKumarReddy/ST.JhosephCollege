@@ -41,12 +41,14 @@ class ContactUsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         switch indexPath.row {
         case 0:
-            break
+            UIApplication.sharedApplication().openURL(NSURL(string: "http://www.sjpuc.in")!)
+        case 3:
+            UIApplication.sharedApplication().openURL(NSURL(string: "https://www.google.co.in/maps/place/SJPUC/@12.9711237,77.6020432,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae1680a56a367b:0xd5e28804a197d3d0!8m2!3d12.9711185!4d77.6042319?hl=en")!)
         default:
             break
         }
     }
-
 }
