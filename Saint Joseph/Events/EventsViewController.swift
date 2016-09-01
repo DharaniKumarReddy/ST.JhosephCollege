@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AnnouncementDownloadDelegate {
     
     var events: [NewsData]!
     
@@ -41,7 +41,9 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.tag = indexPath.row
             return cell
         } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier(Constants.CellIdentifier.AnnouncementsCell)!
+            let cell = tableView.dequeueReusableCellWithIdentifier(Constants.CellIdentifier.AnnouncementsCell)! as! AnnouncementsCell
+            cell.delegate = self
+            cell.tag = indexPath.row
             return cell
         }
     }
@@ -52,4 +54,9 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         slidingViewController().anchorTopViewToRightAnimated(true)
     }
 
+    // MARK:- AnnouncementDownloadDelegate
+    
+    func downloadPDF(tag: Int) {
+        
+    }
 }

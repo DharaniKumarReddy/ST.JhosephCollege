@@ -33,6 +33,9 @@
 		05555F7D1D2A041900FBC31C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05555F7B1D2A041900FBC31C /* LaunchScreen.storyboard */; };
 		05555F881D2A041A00FBC31C /* Saint_JosephTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05555F871D2A041A00FBC31C /* Saint_JosephTests.swift */; };
 		05555F931D2A041A00FBC31C /* Saint_JosephUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05555F921D2A041A00FBC31C /* Saint_JosephUITests.swift */; };
+		055654241D77E1D3000FD675 /* AluminiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055654231D77E1D3000FD675 /* AluminiViewController.swift */; };
+		055654251D77E1D3000FD675 /* AluminiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055654231D77E1D3000FD675 /* AluminiViewController.swift */; };
+		055654261D77E1D3000FD675 /* AluminiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055654231D77E1D3000FD675 /* AluminiViewController.swift */; };
 		056CF4571D3BB5F20014BAB2 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F681D3B6C860026130E /* NewsData.swift */; };
 		056CF4581D3BB5F30014BAB2 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F681D3B6C860026130E /* NewsData.swift */; };
 		0570E7781D58DE76005E5C8C /* Contact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0570E7771D58DE76005E5C8C /* Contact.storyboard */; };
@@ -140,6 +143,7 @@
 		05555F8E1D2A041A00FBC31C /* Saint JosephUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Saint JosephUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05555F921D2A041A00FBC31C /* Saint_JosephUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saint_JosephUITests.swift; sourceTree = "<group>"; };
 		05555F941D2A041A00FBC31C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		055654231D77E1D3000FD675 /* AluminiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AluminiViewController.swift; path = Controllers/AluminiViewController.swift; sourceTree = "<group>"; };
 		0570E7771D58DE76005E5C8C /* Contact.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Contact.storyboard; path = Contact/Contact.storyboard; sourceTree = "<group>"; };
 		0570E77C1D58DED1005E5C8C /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactUsViewController.swift; path = Contact/ContactUsViewController.swift; sourceTree = "<group>"; };
 		0580C9C81D4492FC00EB8525 /* EventsAnnouncementsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsAnnouncementsTableViewCell.swift; path = Events/EventsAnnouncementsTableViewCell.swift; sourceTree = "<group>"; };
@@ -380,6 +384,7 @@
 				05D896961D388FCB0038D8BD /* SlidingViewController.swift */,
 				05D896971D388FCB0038D8BD /* ViewController.swift */,
 				05A54C201D768D3100DD35F6 /* HtmlLoaderViewController.swift */,
+				055654231D77E1D3000FD675 /* AluminiViewController.swift */,
 			);
 			name = DashBoard;
 			sourceTree = "<group>";
@@ -625,6 +630,7 @@
 				05C801921D3961870010DA3A /* OLModels.m in Sources */,
 				05C801501D3942CB0010DA3A /* APICaller.swift in Sources */,
 				05C801591D39495E0010DA3A /* StringExtensions.swift in Sources */,
+				055654241D77E1D3000FD675 /* AluminiViewController.swift in Sources */,
 				05C801941D39625C0010DA3A /* OLModelKeyMappers.swift in Sources */,
 				0580C9D01D44A85400EB8525 /* DateFormatter.swift in Sources */,
 				05267F221D3B28000026130E /* SJDataModel.xcdatamodeld in Sources */,
@@ -657,6 +663,7 @@
 				0580C9CA1D4492FC00EB8525 /* EventsAnnouncementsTableViewCell.swift in Sources */,
 				05D8969F1D388FCB0038D8BD /* SlidingViewController.swift in Sources */,
 				05ED9BCE1D43860100AABB0F /* YoutubeViewController.swift in Sources */,
+				055654251D77E1D3000FD675 /* AluminiViewController.swift in Sources */,
 				056CF4571D3BB5F20014BAB2 /* NewsData.swift in Sources */,
 				0570E77E1D58DED1005E5C8C /* ContactUsViewController.swift in Sources */,
 				05A54C221D768D3100DD35F6 /* HtmlLoaderViewController.swift in Sources */,
@@ -689,6 +696,7 @@
 				0580C9CB1D4492FC00EB8525 /* EventsAnnouncementsTableViewCell.swift in Sources */,
 				05D896A01D388FCB0038D8BD /* SlidingViewController.swift in Sources */,
 				05ED9BCF1D43860100AABB0F /* YoutubeViewController.swift in Sources */,
+				055654261D77E1D3000FD675 /* AluminiViewController.swift in Sources */,
 				056CF4581D3BB5F30014BAB2 /* NewsData.swift in Sources */,
 				0570E77F1D58DED1005E5C8C /* ContactUsViewController.swift in Sources */,
 				05A54C231D768D3100DD35F6 /* HtmlLoaderViewController.swift in Sources */,

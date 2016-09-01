@@ -58,12 +58,12 @@
                                                                 <constraint firstAttribute="height" constant="1" id="gBs-TZ-hpi"/>
                                                             </constraints>
                                                         </view>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCv-dV-ERi">
-                                                            <rect key="frame" x="187" y="78" width="121" height="28"/>
+                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCv-dV-ERi">
+                                                            <rect key="frame" x="232" y="78" width="76" height="28"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <state key="normal" title="ADD TO CALENDAR"/>
+                                                            <state key="normal" title="DOWNLOAD"/>
                                                             <connections>
-                                                                <action selector="addToCalendar:" destination="MHs-Hh-JVo" eventType="touchUpInside" id="oag-MX-28s"/>
+                                                                <action selector="downloadPDF:" destination="MHs-Hh-JVo" eventType="touchUpInside" id="nAn-3M-RrM"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -128,8 +128,8 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvl-oj-knx">
-                                                                    <rect key="frame" x="19" y="29" width="42" height="21"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <rect key="frame" x="18" y="29" width="45" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -165,7 +165,7 @@
                                                                 <constraint firstAttribute="height" constant="1" id="5Pa-At-fRG"/>
                                                             </constraints>
                                                         </view>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiI-be-1br">
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiI-be-1br">
                                                             <rect key="frame" x="187" y="78" width="121" height="28"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <state key="normal" title="ADD TO CALENDAR"/>

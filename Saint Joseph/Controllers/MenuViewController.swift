@@ -22,6 +22,8 @@ class MenuViewController: UIViewController {
             segueToViewControllerInStoryboard(Constants.StoryBoard.Main, navigationControllerIdentifier: Constants.NavigationController.HtmlLoaderNavigationController, tag: menuButton.tag)
         case 3:
             segueToInitialViewControllerInStoryboard(Constants.StoryBoard.Main)
+        case 5:
+            segueToViewControllerInStoryboard(Constants.StoryBoard.Main, navigationControllerIdentifier: Constants.NavigationController.AluminiNavigationController, tag: 5)
         default:
             return
         }
@@ -34,10 +36,16 @@ class MenuViewController: UIViewController {
     }
     
     func segueToViewControllerInStoryboard(storyboardName: String, navigationControllerIdentifier: String, tag: Int) {
-        let htmlNavigationController = UIStoryboard(storyboardName).instantiateNavigationController(navigationControllerIdentifier)
-        (htmlNavigationController.viewControllers[0] as! HtmlLoaderViewController).controllerType = tag == 1 ? .RectorMessage : tag == 2 ? .PrincipalMessage : .About
-        let ecSlidingSegue = ECSlidingSegue(identifier: nil, source: self, destination: htmlNavigationController)
-        ecSlidingSegue.perform()
+        if tag == 5 {
+            let aluminiNavigationController = UIStoryboard(storyboardName).instantiateNavigationController(navigationControllerIdentifier)
+            let ecSlidingSegue = ECSlidingSegue(identifier: nil, source: self, destination: aluminiNavigationController)
+            ecSlidingSegue.perform()
+        } else {
+            let htmlNavigationController = UIStoryboard(storyboardName).instantiateNavigationController(navigationControllerIdentifier)
+            (htmlNavigationController.viewControllers[0] as! HtmlLoaderViewController).controllerType = tag == 1 ? .RectorMessage : tag == 2 ? .PrincipalMessage : .About
+            let ecSlidingSegue = ECSlidingSegue(identifier: nil, source: self, destination: htmlNavigationController)
+            ecSlidingSegue.perform()
+        }
     }
 
 }

@@ -43,6 +43,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeH-DE-JLD">
                                 <rect key="frame" x="0.0" y="442" width="160" height="126"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="JaL-Br-krh" kind="push" identifier="ERPSegue" id="9bL-7y-hLc"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="erp" translatesAutoresizingMaskIntoConstraints="NO" id="KSp-YI-e9V">
                                 <rect key="frame" x="56" y="465" width="48" height="48"/>
@@ -100,6 +103,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vO8-9o-JNf">
                                 <rect key="frame" x="160" y="190" width="160" height="126"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="JaL-Br-krh" kind="push" identifier="AcademicSegue" id="rfZ-Of-Qsf"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="academic" translatesAutoresizingMaskIntoConstraints="NO" id="otD-RB-9Aq">
                                 <rect key="frame" x="216" y="213" width="48" height="48"/>
@@ -517,7 +523,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="00DFA596-1D86-4535-9C9E-89E97A7051CB" translatesAutoresizingMaskIntoConstraints="NO" id="yxD-ba-Ghw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3E719C1C-2AE4-4140-B1B1-213C662D94AD" translatesAutoresizingMaskIntoConstraints="NO" id="yxD-ba-Ghw">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                         </subviews>
@@ -641,10 +647,109 @@
             <point key="canvasLocation" x="671" y="948"/>
         </scene>
         <!--Navigation Controller-->
+        <scene sceneID="79c-vI-WHc">
+            <objects>
+                <navigationController storyboardIdentifier="AluminiNavigationController" id="SrN-CA-azC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fhB-oo-vvh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.08235294118" green="0.39607843139999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Jgp-6V-Ff6" kind="relationship" relationship="rootViewController" id="DR0-UV-IZx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fL-TZ-Ito" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-294" y="1670"/>
+        </scene>
+        <!--Alumini View Controller-->
+        <scene sceneID="X6t-Kj-aUj">
+            <objects>
+                <viewController id="Jgp-6V-Ff6" customClass="AluminiViewController" customModule="Saint_Joseph" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5lP-eZ-vJq"/>
+                        <viewControllerLayoutGuide type="bottom" id="K76-3C-aAz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Db-zj-whb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5HV-l5-nDI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="474"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AluminiTableViewCell" id="5L7-bi-s99" customClass="AluminiTableViewCell" customModule="Saint_Joseph" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5L7-bi-s99" id="QS8-Ej-vd4">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dGL-aK-3Yy">
+                                                    <rect key="frame" x="8" y="18" width="304" height="25"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hZ-LV-H93">
+                                                    <rect key="frame" x="8" y="2" width="312" height="41"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="animateSelectionToTextField:" destination="5L7-bi-s99" eventType="touchUpInside" id="HnF-IP-q13"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7hZ-LV-H93" firstAttribute="leading" secondItem="QS8-Ej-vd4" secondAttribute="leading" constant="8" id="6Jz-1h-1NA"/>
+                                                <constraint firstAttribute="bottom" secondItem="7hZ-LV-H93" secondAttribute="bottom" id="OQJ-Xs-c4f"/>
+                                                <constraint firstItem="dGL-aK-3Yy" firstAttribute="leading" secondItem="QS8-Ej-vd4" secondAttribute="leading" constant="8" id="Sif-dB-4B0"/>
+                                                <constraint firstAttribute="bottom" secondItem="dGL-aK-3Yy" secondAttribute="bottom" id="U3d-50-5q0"/>
+                                                <constraint firstItem="7hZ-LV-H93" firstAttribute="top" secondItem="QS8-Ej-vd4" secondAttribute="top" constant="2" id="hlY-YU-sw8"/>
+                                                <constraint firstItem="dGL-aK-3Yy" firstAttribute="top" secondItem="QS8-Ej-vd4" secondAttribute="top" constant="18" id="iu9-Aq-DNN"/>
+                                                <constraint firstAttribute="trailing" secondItem="7hZ-LV-H93" secondAttribute="trailing" id="izE-cj-oA5"/>
+                                                <constraint firstAttribute="trailing" secondItem="dGL-aK-3Yy" secondAttribute="trailing" constant="8" id="kCP-aY-vQ6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="aluminiButtonBottomConstarint" destination="OQJ-Xs-c4f" id="iDf-Al-enP"/>
+                                            <outlet property="aluminiTextField" destination="dGL-aK-3Yy" id="3mj-B9-hcj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5HV-l5-nDI" firstAttribute="leading" secondItem="0Db-zj-whb" secondAttribute="leading" id="DVk-oz-NyP"/>
+                            <constraint firstAttribute="trailing" secondItem="5HV-l5-nDI" secondAttribute="trailing" id="YzF-hN-cLm"/>
+                            <constraint firstItem="K76-3C-aAz" firstAttribute="top" secondItem="5HV-l5-nDI" secondAttribute="bottom" constant="50" id="iLU-xC-S6Y"/>
+                            <constraint firstItem="5HV-l5-nDI" firstAttribute="top" secondItem="0Db-zj-whb" secondAttribute="top" id="uxb-cT-RN1"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="cq0-ek-ML7">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="MhB-zb-FZl">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="hamburgerPressed:" destination="JaL-Br-krh" id="Lqv-HF-kPu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0t-FC-4tw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-294" y="2345"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="aLk-uL-cqt">
             <objects>
                 <navigationController storyboardIdentifier="HtmlLoaderNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="lKH-kY-2TN" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Tzd-5c-5He"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KvK-lT-t0h">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -664,7 +769,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="00DFA596-1D86-4535-9C9E-89E97A7051CB" width="320" height="478">
+        <image name="3E719C1C-2AE4-4140-B1B1-213C662D94AD" width="320" height="478">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -10930,7 +11035,8 @@ AAlgWQAJYFwACWBuAAlgcQAJYHYAAAAAAAAEAQAAAAAAAABBAAAAAAAAAAAAAAAAAAlgeA
         <image name="videos" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Krd-d1-DZ3"/>
         <segue reference="hb3-Os-jyq"/>
+        <segue reference="Krd-d1-DZ3"/>
+        <segue reference="qU2-I8-hey"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,7 +11,7 @@ import UIKit
 class HtmlLoaderViewController: UIViewController {
 
     enum ControllerType {
-        case RectorMessage, PrincipalMessage, About
+        case RectorMessage, PrincipalMessage, About, ERP, Academic
     }
     
     var controllerType: ControllerType!
@@ -33,9 +33,13 @@ class HtmlLoaderViewController: UIViewController {
         } else if controllerType == .PrincipalMessage {
             title = "Principal Message"
             htmlStringName = PRINCIPAL_MSG
-        } else {
+        } else if controllerType == .About {
             title = "Know Your Institute"
             htmlStringName = COLLEGE_WEBSITE
+        } else if controllerType == .ERP {
+            htmlStringName = ERP_URL
+        } else {
+            htmlStringName = ACADEMICS_URL
         }
         webView.loadRequest(NSURLRequest(URL: (NSURL(string: htmlStringName)!)))
     }

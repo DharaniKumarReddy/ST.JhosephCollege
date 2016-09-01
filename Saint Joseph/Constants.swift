@@ -25,6 +25,7 @@ struct Constants {
     struct NavigationController {
         static let DashboardNavigationController  = "DashboardNavigationController"
         static let HtmlLoaderNavigationController = "HtmlLoaderNavigationController"
+        static let AluminiNavigationController        = "AluminiNavigationController"
     }
     
     struct  ViewControllerIdentifier {
@@ -49,6 +50,8 @@ struct Constants {
         static let EventsSegue                                  = "EventsSegue"
         static let GallerySegue                                 = "GallerySegue"
         static let VideosSegue                                  = "VideosSegue"
+        static let AcademicSegue                             = "AcademicSegue"
+        static let ERPSegue                                     = "ERPSegue"
     }
     
     struct Title {
@@ -64,5 +67,6 @@ struct Constants {
         static let VideoCollectionViewCell     = "VideoCollectionViewCell"
         static let GalleryCollectionViewCell   = "GalleryCollectionViewCell"
         static let FullNewsTableCell              = "FullNewsTableCell"
+        static let AluminiTableViewCell          = "AluminiTableViewCell"
     }
 }

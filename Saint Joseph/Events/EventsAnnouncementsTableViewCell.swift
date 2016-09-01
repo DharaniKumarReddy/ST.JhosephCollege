@@ -54,6 +54,10 @@ class EventsCell: EventsAnnouncementsTableViewCell {
     // MARK:- IBActions
     
     @IBAction private func addToCalendar(sender: UIButton) {
+        addEventToCalendar()
+    }
+    
+    private func addEventToCalendar() {
         eventStore.requestAccessToEntityType(.Event, completion: { (granted, error) in
             if granted && error == nil {
                 
@@ -79,4 +83,13 @@ class EventsCell: EventsAnnouncementsTableViewCell {
 
 class AnnouncementsCell: EventsAnnouncementsTableViewCell {
     
+    weak var delegate: AnnouncementDownloadDelegate?
+    
+    @IBAction private func downloadPDF(sender: UIButton) {
+        delegate?.downloadPDF(self.tag)
+    }
+}
+
+protocol AnnouncementDownloadDelegate: class {
+    func downloadPDF(tag: Int)
 }

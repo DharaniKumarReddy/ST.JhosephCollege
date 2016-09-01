@@ -121,6 +121,9 @@ class ViewController: UIViewController {
             }
             galleryViewController.news = news
             galleryViewController.controllerType = segue.identifier == Constants.SegueIdentifier.GallerySegue ? .Gallery : .Videos
+        case Constants.SegueIdentifier.AcademicSegue, Constants.SegueIdentifier.ERPSegue:
+            let htmlViewController = segue.destinationViewController as! HtmlLoaderViewController
+            htmlViewController.controllerType = Constants.SegueIdentifier.AcademicSegue == segue.identifier ? .Academic : .ERP
         default:
             print("Do nothing for other cases")
         }
