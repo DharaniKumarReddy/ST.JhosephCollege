@@ -30,18 +30,33 @@ class AluminiViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 }
 
-class AluminiTableViewCell: UITableViewCell {
+class AluminiTableViewCell: UITableViewCell, UITextFieldDelegate {
     
+    @IBOutlet private weak var aluminiButton: UIButton!
     @IBOutlet private weak var aluminiTextField: UITextField!
     @IBOutlet private weak var aluminiButtonBottomConstarint: NSLayoutConstraint!
     
     @IBAction private func animateSelectionToTextField(sender: UIButton) {
+        animateButton(12, bottom: 25, color: UIColor.redColor())
+    }
+    
+    private func animateButton(fontSize: CGFloat, bottom: CGFloat, color: UIColor) {
         UIView.animateWithDuration(0.3, animations: {
-                sender.titleLabel?.font = UIFont.systemFontOfSize(12)
-                self.aluminiButtonBottomConstarint.constant = 25
-                self.layoutSubviews()
+            self.aluminiButton.titleLabel?.font = UIFont.systemFontOfSize(fontSize)
+            self.aluminiButtonBottomConstarint.constant = bottom
+            self.layoutSubviews()
             }, completion: { finished in
-                sender.titleLabel?.tintColor = UIColor.redColor()
-            })
+                self.aluminiButton.setTitleColor(color, forState: .Normal)
+                if bottom != 0 {
+                    self.aluminiTextField.becomeFirstResponder()
+                }
+        })
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        if textField.text == "" {
+            animateButton(15, bottom: 0, color: UIColor.darkGrayColor())
+        }
+        return true
     }
 }
