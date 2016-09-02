@@ -14,6 +14,7 @@ enum Route {
     case News               //POST
     case Gallery             //GET
     case Videos             //GET
+    case Alumini
     
     var absoluteURL: NSURL {
         return NSURL(string: BASEURL + apiPath)!
@@ -27,6 +28,8 @@ enum Route {
             return "sjpu_app/sjpu_images.php"
         case .Videos:
             return "sjpu_app/sjpu_videos.php"
+        case .Alumini:
+            return "sjpu_app/alumni.php"
         }
     }
     
@@ -38,6 +41,8 @@ enum Route {
             return "Gallery has been watched"
         case .Videos:
             return "Videos has been watched"
+        case .Alumini:
+            return "Details saved"
         }
     }
     

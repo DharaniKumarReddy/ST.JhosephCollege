@@ -55,7 +55,7 @@ class APICaller {
         urlSession = APICaller.createURLSession()
     }
     
-    private func createRequest(requestMethod: RequestMethod, _ route: Route, params: JSONDictionary? = nil) -> NSURLRequest {
+    private func createRequest(requestMethod: RequestMethod, _ route: Route, params: String? = nil) -> NSURLRequest {
         let request = NSMutableURLRequest(URL: route.absoluteURL)
         
         request.HTTPMethod = requestMethod.rawValue
@@ -66,25 +66,15 @@ class APICaller {
             case .GET, .DELETE:
                 break
             case .POST, .PUT:
-                var error: NSError?
-                do {
-                    let body = try NSJSONSerialization.dataWithJSONObject(params, options: [])
-                    request.HTTPBody = body
-                } catch let error1 as NSError {
-                    error = error1
-                    if (error?.localizedDescription) != nil {
-                       // logError(errorMessage)
-                    } else {
-                        //logError("Unexpected JSON Parse Error requestWithOperation: \(requestMethod) \(route.absoluteURL)")
-                    }
-                }
+                let body = params.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
+                request.HTTPBody = body
             }
         }
         print("Response URL-> \(request)")
         return request
     }
     
-    private func enqueueRequest(requestMethod: RequestMethod, _ route: Route, params: JSONDictionary? = nil, retryCount: Int = 0, onSuccessResponse: String -> Void, onErrorMessage: OnErrorMessage) {
+    private func enqueueRequest(requestMethod: RequestMethod, _ route: Route, params: String? = nil, retryCount: Int = 0, onSuccessResponse: String -> Void, onErrorMessage: OnErrorMessage) {
         let urlRequest = createRequest(requestMethod, route, params: params)
         let dataTask = urlSession.dataTaskWithRequest(urlRequest) { data, response, error in
             if let httpResponse = response as? NSHTTPURLResponse {
@@ -140,18 +130,30 @@ class APICaller {
     func fetchNews(onSuccessNews onSuccess: OnNewsFeed, onError: OnErrorMessage)  {
         let defaults = NSUserDefaults.standardUserDefaults()
         let updatedDate = defaults.valueForKey(Constants.UserDefaults.NewsUpdated)
-        var params = JSONDictionary()
         if updatedDate != nil {
-            params["updated"] = "\(updatedDate!)"
+            let parameter = "updated=\(updatedDate as! String)"
+            enqueueRequest(.POST, .News, params: parameter, onSuccessResponse: { responseString in
+                if responseString.containsString("sjpu_news") {
+                    let newsFeed = OLNewsFeed(jsonString: responseString)
+                    onSuccess(newsFeed)
+                } else {
+                    onSuccess(OLNewsFeed())
+                }
+                }, onErrorMessage: onError)
+        } else {
+            enqueueRequest(.POST, .News, onSuccessResponse: { responseString in
+                if responseString.containsString("sjpu_news") {
+                    let newsFeed = OLNewsFeed(jsonString: responseString)
+                    onSuccess(newsFeed)
+                } else {
+                    onSuccess(OLNewsFeed())
+                }
+                }, onErrorMessage: onError)
         }
-        enqueueRequest(.POST, .News, params: params, onSuccessResponse: { responseString in
-            let newsFeed = OLNewsFeed(jsonString: responseString)
-            onSuccess(newsFeed)
-            }, onErrorMessage: onError)
     }
     
-    func fetchGallery(onSuccessGallery onSuccess: OnGallery, onError: OnErrorMessage) {
-        enqueueRequest(.GET, .Gallery, params: ["news_id" : "44"], onSuccessResponse: { response in
+    func fetchGallery(params params: String, onSuccessGallery onSuccess: OnGallery, onError: OnErrorMessage) {
+        enqueueRequest(.POST, .Gallery, params: params, onSuccessResponse: { response in
             let galleryItems = OLGallery(jsonString: response)
             onSuccess(galleryItems)
             }, onErrorMessage: onError)
@@ -161,6 +163,12 @@ class APICaller {
         enqueueRequest(.GET, .Videos, onSuccessResponse: { response in
             let videos = OLVideos(jsonString: response)
             onSucess(videos)
+            }, onErrorMessage: onError)
+    }
+    
+    func sendUserDetails(params params: String, onSuccess: OnSuccessResponse, onError: OnErrorMessage) {
+        enqueueRequest(.POST, .Alumini, params: params, onSuccessResponse: { response in
+                onSuccess(response)
             }, onErrorMessage: onError)
     }
 }

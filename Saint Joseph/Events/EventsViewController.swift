@@ -12,6 +12,8 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var events: [NewsData]!
     
+    var announcements: [NewsData]!
+    
     var controllerType: ControllerType!
     
     enum ControllerType {
@@ -30,7 +32,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK:- UITableViewDataSource Methods
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return controllerType == .Events ? events.count : 4
+        return controllerType == .Events ? events.count : announcements.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -42,6 +44,8 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier(Constants.CellIdentifier.AnnouncementsCell)! as! AnnouncementsCell
+            cell.announcement = announcements[indexPath.row]
+            cell.fillData()
             cell.delegate = self
             cell.tag = indexPath.row
             return cell
@@ -56,7 +60,9 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     // MARK:- AnnouncementDownloadDelegate
     
-    func downloadPDF(tag: Int) {
-        
+    func showPDF(url: String) {
+        let pdfViewController = UIStoryboard(Constants.StoryBoard.Events).instantiateViewControllerWithIdentifier(Constants.ViewControllerIdentifier.PDFViewController) as! PDFViewController
+        pdfViewController.pdfURL = url
+        presentViewController(pdfViewController, animated: true, completion: nil)
     }
 }

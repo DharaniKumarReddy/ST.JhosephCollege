@@ -11,6 +11,6 @@
 
 @interface OLVideos : OLModel
 
-@property (nonatomic) NSArray<OLVideo> *sjec_videos;
+@property (nonatomic) NSArray<OLVideo> *sjpu_videos;
 
 @end

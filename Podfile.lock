@@ -1,13 +1,18 @@
 PODS:
   - ECSlidingViewController (2.0.3)
   - JSONModel (1.0.2)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
 
 DEPENDENCIES:
   - ECSlidingViewController (~> 2.0.3)
   - JSONModel (~> 1.0.2)
+  - SDWebImage (~> 3.7.1)
 
 SPEC CHECKSUMS:
   ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
   JSONModel: 6ffcb4ffa3659c9e9a2e5d45d6c7705bab187c03
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
 
 COCOAPODS: 0.38.2

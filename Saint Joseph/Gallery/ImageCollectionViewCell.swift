@@ -21,7 +21,7 @@ class VideoCollectionViewCell: ImageCollectionViewCell {
     @IBOutlet weak var title: UILabel!
     
     @IBAction private func videoClicked(sender: UIButton) {
-            delegate?.chooseSelectedItem(sender.tag)
+            delegate?.chooseSelectedItem(sender.tag, gallery: true)
     }
 }
 
@@ -30,10 +30,10 @@ class GalleryCollectionViewCell: ImageCollectionViewCell {
     @IBOutlet weak var title: UILabel!
     
     @IBAction private func imageClicked(sender: UIButton) {
-        delegate?.chooseSelectedItem(sender.tag)
+        delegate?.chooseSelectedItem(sender.tag, gallery: true)
     }
 }
 
 protocol ChoosedItemDelegate: class {
-    func chooseSelectedItem(tag: Int)
+    func chooseSelectedItem(tag: Int, gallery: Bool)
 }

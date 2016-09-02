@@ -36,7 +36,7 @@ import Foundation
 extension OLGallery {
     override public class func keyMapper() -> JSONKeyMapper {
         return JSONKeyMapper(dictionary: [
-            "sjec_images" : "gallery"
+            "sjpu_images" : "gallery"
             ])
     }
 }

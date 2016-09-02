@@ -86,17 +86,34 @@ class ViewController: UIViewController {
     
     // MARK:- API Caller Method
     
+    private func fetchImagesForNewsID(newsID: String) {
+        let parameter = "news_id=\(newsID)"
+        let taskGroup = dispatch_group_create()
+        dispatch_group_enter(taskGroup)
+        APICaller.getInstance().fetchGallery(params: parameter , onSuccessGallery: { images in
+            dispatch_group_leave(taskGroup)
+            self.saveImageURL(images.gallery)
+            }, onError: { _ in
+                dispatch_group_leave(taskGroup)
+        })
+    }
+    
     private func fetchNewsFeed() {
         let taskGroup = dispatch_group_create()
         dispatch_group_enter(taskGroup)
         APICaller.getInstance().fetchNews(
             onSuccessNews: { newsFeed in
                 dispatch_group_leave(taskGroup)
-                self.saveData(newsFeed.sjpu_news)
+                if let _ = newsFeed.sjpu_news {
+                    self.saveData(newsFeed.sjpu_news)
+                }
             }, onError: { _ in
                 dispatch_group_leave(taskGroup)
-                self.saveData(NSArray())
         })
+    }
+    
+    private func saveImageURL(images: [OLImageItem]) {
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -109,10 +126,17 @@ class ViewController: UIViewController {
             newsViewController.news = news
         case Constants.SegueIdentifier.EventsSegue, Constants.SegueIdentifier.AnnouncementsSegue:
             let eventsController = segue.destinationViewController as! EventsViewController
-            let events = result.filter {
-                $0.type == "2"
+            if segue.identifier == Constants.SegueIdentifier.EventsSegue {
+                let events = result.filter {
+                    $0.type == "2"
+                }
+                eventsController.events = events
+            } else {
+                let announcements = result.filter {
+                    $0.type == "3"
+                }
+                eventsController.announcements = announcements
             }
-            eventsController.events = events
             eventsController.controllerType = segue.identifier == Constants.SegueIdentifier.EventsSegue ? .Events : .Announcements
         case Constants.SegueIdentifier.GallerySegue, Constants.SegueIdentifier.VideosSegue:
             let galleryViewController = segue.destinationViewController as! GalleryViewController

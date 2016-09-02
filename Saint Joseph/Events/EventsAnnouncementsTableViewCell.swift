@@ -85,11 +85,18 @@ class AnnouncementsCell: EventsAnnouncementsTableViewCell {
     
     weak var delegate: AnnouncementDownloadDelegate?
     
+    var announcement: NewsData!
+    
     @IBAction private func downloadPDF(sender: UIButton) {
-        delegate?.downloadPDF(self.tag)
+        delegate?.showPDF(announcement.largeImageURL!)
+    }
+    
+    func fillData( ) {
+        titleLabel.text = announcement.title
+        descriptLabel.text = announcement.descript! as String
     }
 }
 
 protocol AnnouncementDownloadDelegate: class {
-    func downloadPDF(tag: Int)
+    func showPDF(url: String)
 }

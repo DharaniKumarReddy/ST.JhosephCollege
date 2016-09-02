@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051E36221D79BA0E0011C388 /* GalleryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E36211D79BA0E0011C388 /* GalleryPageViewController.swift */; };
+		051E36231D79BA0E0011C388 /* GalleryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E36211D79BA0E0011C388 /* GalleryPageViewController.swift */; };
+		051E36241D79BA0E0011C388 /* GalleryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E36211D79BA0E0011C388 /* GalleryPageViewController.swift */; };
+		051E36261D79BA310011C388 /* GalleryListPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E36251D79BA310011C388 /* GalleryListPageViewController.swift */; };
+		051E36271D79BA310011C388 /* GalleryListPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E36251D79BA310011C388 /* GalleryListPageViewController.swift */; };
+		051E36281D79BA310011C388 /* GalleryListPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E36251D79BA310011C388 /* GalleryListPageViewController.swift */; };
 		05267EFA1D39CD950026130E /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05267EF91D39CD950026130E /* Events.storyboard */; };
 		05267EFD1D39CDE70026130E /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267EFC1D39CDE70026130E /* EventsViewController.swift */; };
 		05267F011D39CE2B0026130E /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F001D39CE2B0026130E /* NewsViewController.swift */; };
@@ -27,6 +33,15 @@
 		05267F641D3B67680026130E /* NSManagedObjectContextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F621D3B67680026130E /* NSManagedObjectContextExtension.swift */; };
 		05267F651D3B67680026130E /* NSManagedObjectContextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F621D3B67680026130E /* NSManagedObjectContextExtension.swift */; };
 		05267F691D3B6C860026130E /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05267F681D3B6C860026130E /* NewsData.swift */; };
+		053C18F41D785EC700382D3B /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053C18F31D785EC700382D3B /* PDFViewController.swift */; };
+		053C18F51D785EC700382D3B /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053C18F31D785EC700382D3B /* PDFViewController.swift */; };
+		053C18F61D785EC700382D3B /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053C18F31D785EC700382D3B /* PDFViewController.swift */; };
+		053C18F91D78A1AF00382D3B /* BlueBorderedRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053C18F81D78A1AF00382D3B /* BlueBorderedRoundedButton.swift */; };
+		053C18FA1D78A1AF00382D3B /* BlueBorderedRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053C18F81D78A1AF00382D3B /* BlueBorderedRoundedButton.swift */; };
+		053C18FB1D78A1AF00382D3B /* BlueBorderedRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053C18F81D78A1AF00382D3B /* BlueBorderedRoundedButton.swift */; };
+		053C18FD1D78A93800382D3B /* AlertViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053C18FC1D78A93800382D3B /* AlertViewExtension.swift */; };
+		053C18FE1D78A93800382D3B /* AlertViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053C18FC1D78A93800382D3B /* AlertViewExtension.swift */; };
+		053C18FF1D78A93800382D3B /* AlertViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053C18FC1D78A93800382D3B /* AlertViewExtension.swift */; };
 		05555F731D2A041900FBC31C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05555F721D2A041900FBC31C /* AppDelegate.swift */; };
 		05555F781D2A041900FBC31C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05555F761D2A041900FBC31C /* Main.storyboard */; };
 		05555F7A1D2A041900FBC31C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05555F791D2A041900FBC31C /* Assets.xcassets */; };
@@ -120,6 +135,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		051E36211D79BA0E0011C388 /* GalleryPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPageViewController.swift; sourceTree = "<group>"; };
+		051E36251D79BA310011C388 /* GalleryListPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryListPageViewController.swift; path = Gallery/GalleryListPageViewController.swift; sourceTree = "<group>"; };
 		05267EF91D39CD950026130E /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Events.storyboard; path = Events/Events.storyboard; sourceTree = "<group>"; };
 		05267EFC1D39CDE70026130E /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsViewController.swift; path = Events/EventsViewController.swift; sourceTree = "<group>"; };
 		05267F001D39CE2B0026130E /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsViewController.swift; path = News/NewsViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +149,9 @@
 		05267F211D3B28000026130E /* SJDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SJDataModel.xcdatamodel; sourceTree = "<group>"; };
 		05267F621D3B67680026130E /* NSManagedObjectContextExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSManagedObjectContextExtension.swift; path = Extensions/NSManagedObjectContextExtension.swift; sourceTree = "<group>"; };
 		05267F681D3B6C860026130E /* NewsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsData.swift; path = "Core Data/NewsData.swift"; sourceTree = "<group>"; };
+		053C18F31D785EC700382D3B /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFViewController.swift; path = Events/PDFViewController.swift; sourceTree = "<group>"; };
+		053C18F81D78A1AF00382D3B /* BlueBorderedRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlueBorderedRoundedButton.swift; path = Helpers/BlueBorderedRoundedButton.swift; sourceTree = "<group>"; };
+		053C18FC1D78A93800382D3B /* AlertViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertViewExtension.swift; path = Helpers/AlertViewExtension.swift; sourceTree = "<group>"; };
 		05555F6F1D2A041900FBC31C /* Saint Joseph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Saint Joseph.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05555F721D2A041900FBC31C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05555F771D2A041900FBC31C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -226,6 +246,7 @@
 				05267EF91D39CD950026130E /* Events.storyboard */,
 				05267EFC1D39CDE70026130E /* EventsViewController.swift */,
 				0580C9C81D4492FC00EB8525 /* EventsAnnouncementsTableViewCell.swift */,
+				053C18F31D785EC700382D3B /* PDFViewController.swift */,
 			);
 			name = Events;
 			sourceTree = "<group>";
@@ -239,6 +260,8 @@
 				05267F181D39EF930026130E /* CollectionViewTableViewCell.swift */,
 				05ED9BC71D4355E500AABB0F /* ImageCollectionViewCell.swift */,
 				05ED9BCC1D43860100AABB0F /* YoutubeViewController.swift */,
+				051E36251D79BA310011C388 /* GalleryListPageViewController.swift */,
+				051E36211D79BA0E0011C388 /* GalleryPageViewController.swift */,
 			);
 			name = Gallery;
 			sourceTree = "<group>";
@@ -328,6 +351,8 @@
 			isa = PBXGroup;
 			children = (
 				0580C9CF1D44A85400EB8525 /* DateFormatter.swift */,
+				053C18F81D78A1AF00382D3B /* BlueBorderedRoundedButton.swift */,
+				053C18FC1D78A93800382D3B /* AlertViewExtension.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -620,8 +645,10 @@
 				05A54C211D768D3100DD35F6 /* HtmlLoaderViewController.swift in Sources */,
 				05267F631D3B67680026130E /* NSManagedObjectContextExtension.swift in Sources */,
 				05C801611D3956CA0010DA3A /* OLModel.m in Sources */,
+				053C18FD1D78A93800382D3B /* AlertViewExtension.swift in Sources */,
 				05267F131D39DE2D0026130E /* GalleryViewController.swift in Sources */,
 				05B9CC8A1D36A728001290A4 /* Constants.swift in Sources */,
+				051E36221D79BA0E0011C388 /* GalleryPageViewController.swift in Sources */,
 				05D896A11D388FCB0038D8BD /* ViewController.swift in Sources */,
 				05267F691D3B6C860026130E /* NewsData.swift in Sources */,
 				05D8969B1D388FCB0038D8BD /* MenuViewController.swift in Sources */,
@@ -630,8 +657,11 @@
 				05C801921D3961870010DA3A /* OLModels.m in Sources */,
 				05C801501D3942CB0010DA3A /* APICaller.swift in Sources */,
 				05C801591D39495E0010DA3A /* StringExtensions.swift in Sources */,
+				053C18F91D78A1AF00382D3B /* BlueBorderedRoundedButton.swift in Sources */,
+				051E36261D79BA310011C388 /* GalleryListPageViewController.swift in Sources */,
 				055654241D77E1D3000FD675 /* AluminiViewController.swift in Sources */,
 				05C801941D39625C0010DA3A /* OLModelKeyMappers.swift in Sources */,
+				053C18F41D785EC700382D3B /* PDFViewController.swift in Sources */,
 				0580C9D01D44A85400EB8525 /* DateFormatter.swift in Sources */,
 				05267F221D3B28000026130E /* SJDataModel.xcdatamodeld in Sources */,
 				05ED9BC81D4355E500AABB0F /* ImageCollectionViewCell.swift in Sources */,
@@ -658,10 +688,13 @@
 				05555F881D2A041A00FBC31C /* Saint_JosephTests.swift in Sources */,
 				05B9CC8B1D36A728001290A4 /* Constants.swift in Sources */,
 				05C801561D3947920010DA3A /* Route.swift in Sources */,
+				051E36231D79BA0E0011C388 /* GalleryPageViewController.swift in Sources */,
 				05267F021D39CE2F0026130E /* NewsViewController.swift in Sources */,
 				05267F141D39DE2D0026130E /* GalleryViewController.swift in Sources */,
 				0580C9CA1D4492FC00EB8525 /* EventsAnnouncementsTableViewCell.swift in Sources */,
 				05D8969F1D388FCB0038D8BD /* SlidingViewController.swift in Sources */,
+				053C18F51D785EC700382D3B /* PDFViewController.swift in Sources */,
+				053C18FE1D78A93800382D3B /* AlertViewExtension.swift in Sources */,
 				05ED9BCE1D43860100AABB0F /* YoutubeViewController.swift in Sources */,
 				055654251D77E1D3000FD675 /* AluminiViewController.swift in Sources */,
 				056CF4571D3BB5F20014BAB2 /* NewsData.swift in Sources */,
@@ -677,7 +710,9 @@
 				05B924DF1D57074700CD8C53 /* FullNewsViewController.swift in Sources */,
 				05D896991D388FCB0038D8BD /* BaseViewController.swift in Sources */,
 				05D8969C1D388FCB0038D8BD /* MenuViewController.swift in Sources */,
+				051E36271D79BA310011C388 /* GalleryListPageViewController.swift in Sources */,
 				05DF47EE1D407C200073D21A /* EventsViewController.swift in Sources */,
+				053C18FA1D78A1AF00382D3B /* BlueBorderedRoundedButton.swift in Sources */,
 				05ED9BC91D4355E500AABB0F /* ImageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,10 +726,13 @@
 				05555F931D2A041A00FBC31C /* Saint_JosephUITests.swift in Sources */,
 				05B9CC8C1D36A728001290A4 /* Constants.swift in Sources */,
 				05C801571D3947920010DA3A /* Route.swift in Sources */,
+				051E36241D79BA0E0011C388 /* GalleryPageViewController.swift in Sources */,
 				05267F031D39CE300026130E /* NewsViewController.swift in Sources */,
 				05267F151D39DE2D0026130E /* GalleryViewController.swift in Sources */,
 				0580C9CB1D4492FC00EB8525 /* EventsAnnouncementsTableViewCell.swift in Sources */,
 				05D896A01D388FCB0038D8BD /* SlidingViewController.swift in Sources */,
+				053C18F61D785EC700382D3B /* PDFViewController.swift in Sources */,
+				053C18FF1D78A93800382D3B /* AlertViewExtension.swift in Sources */,
 				05ED9BCF1D43860100AABB0F /* YoutubeViewController.swift in Sources */,
 				055654261D77E1D3000FD675 /* AluminiViewController.swift in Sources */,
 				056CF4581D3BB5F30014BAB2 /* NewsData.swift in Sources */,
@@ -710,7 +748,9 @@
 				05B924E01D57074700CD8C53 /* FullNewsViewController.swift in Sources */,
 				05D8969A1D388FCB0038D8BD /* BaseViewController.swift in Sources */,
 				05D8969D1D388FCB0038D8BD /* MenuViewController.swift in Sources */,
+				051E36281D79BA310011C388 /* GalleryListPageViewController.swift in Sources */,
 				05DF47EF1D407C210073D21A /* EventsViewController.swift in Sources */,
+				053C18FB1D78A1AF00382D3B /* BlueBorderedRoundedButton.swift in Sources */,
 				05ED9BCA1D4355E500AABB0F /* ImageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

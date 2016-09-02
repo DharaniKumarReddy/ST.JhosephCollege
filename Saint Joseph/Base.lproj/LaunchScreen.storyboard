@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SJPUC_LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="EmS-a5-eQQ">
-                                <rect key="frame" x="40" y="62" width="240" height="445"/>
+                                <rect key="frame" x="40" y="82" width="240" height="445"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Afw-dj-qdI"/>
                                     <constraint firstAttribute="height" constant="445" id="hDW-bF-OyV"/>
@@ -30,7 +30,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EmS-a5-eQQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="OR1-CG-1dJ"/>
+                            <constraint firstItem="EmS-a5-eQQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="20" id="OR1-CG-1dJ"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="YW6-5r-8Hs" secondAttribute="bottom" id="SYh-6R-TxE"/>
                             <constraint firstItem="EmS-a5-eQQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="TpU-sR-SFa"/>
                             <constraint firstAttribute="trailing" secondItem="YW6-5r-8Hs" secondAttribute="trailing" id="UPn-qT-Ygh"/>
@@ -45,7 +45,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SJPUC_LOGO" width="582" height="1080"/>
+        <image name="SJPUC_LOGO" width="240" height="445"/>
         <image name="background" width="320" height="569"/>
     </resources>
 </document>

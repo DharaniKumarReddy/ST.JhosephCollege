@@ -48,7 +48,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         // Adjust cell size for orientation
         let width = UIScreen.mainScreen().bounds.width / 2
-        return CGSizeMake(width, 124.0)
+        return CGSizeMake(width, 134.0)
     }
     
     // MARK:- UICollectionView DataSource Methods
@@ -93,7 +93,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK:- ChooseItem Method
     
-    func chooseSelectedItem(tag: Int) {
+    func chooseSelectedItem(tag: Int, gallery: Bool) {
         let fullNewsViewController = UIStoryboard(Constants.StoryBoard.News).instantiateViewControllerWithIdentifier(Constants.ViewControllerIdentifier.FullNewsViewController) as! FullNewsViewController
         fullNewsViewController.news = news[tag]
         navigationController?.pushViewController(fullNewsViewController, animated: true)

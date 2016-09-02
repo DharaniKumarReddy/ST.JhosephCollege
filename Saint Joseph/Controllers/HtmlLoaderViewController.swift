@@ -28,17 +28,19 @@ class HtmlLoaderViewController: UIViewController {
     private func setTitle() {
         var htmlStringName = ""
         if controllerType == .RectorMessage {
-            title = "Rector Message"
+            title = Constants.Title.RectorMessage
             htmlStringName = RECTOR_MSG
         } else if controllerType == .PrincipalMessage {
-            title = "Principal Message"
+            title = Constants.Title.PrincipalMessage
             htmlStringName = PRINCIPAL_MSG
         } else if controllerType == .About {
-            title = "Know Your Institute"
+            title = Constants.Title.KnowYourInstitute
             htmlStringName = COLLEGE_WEBSITE
         } else if controllerType == .ERP {
+            title = Constants.Title.ERP
             htmlStringName = ERP_URL
         } else {
+            title = Constants.Title.Academic
             htmlStringName = ACADEMICS_URL
         }
         webView.loadRequest(NSURLRequest(URL: (NSURL(string: htmlStringName)!)))

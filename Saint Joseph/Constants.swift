@@ -20,6 +20,7 @@ struct Constants {
         static let Main         = "Main"
         static let News        = "News"
         static let Gallery      = "Gallery"
+        static let Events       = "Events"
     }
     
     struct NavigationController {
@@ -33,6 +34,8 @@ struct Constants {
         static let GalleryListViewController = "GalleryListViewController"
         static let FullNewsViewController   = "FullNewsViewController"
         static let HtmlLoaderViewController = "HtmlLoaderViewController"
+        static let PDFViewController             = "PDFViewController"
+        static let GalleryPageViewController = "GalleryPageViewController"
     }
 
     struct ErrorMessage {
@@ -52,13 +55,19 @@ struct Constants {
         static let VideosSegue                                  = "VideosSegue"
         static let AcademicSegue                             = "AcademicSegue"
         static let ERPSegue                                     = "ERPSegue"
+        static let GalleryListPageViewController      = "GalleryDataPageViewControllerEmbedSegue"
     }
     
     struct Title {
-        static let Events                           = "Events"
-        static let Announcements            = "Announcements"
-        static let Gallery                          = "Gallery"
-        static let Videos                           = "Videos"
+        static let Events                           = "EVENTS"
+        static let Announcements            = "ANNOUNCEMENTS"
+        static let Gallery                          = "GALLERY"
+        static let Videos                           = "VIDEOS"
+        static let RectorMessage             = "Rector Message"
+        static let PrincipalMessage          = "Principal Message"
+        static let KnowYourInstitute         = "Know Your Institute"
+        static let ERP                              = "ERP"
+        static let Academic                      = "ACADEMIC"
     }
     
     struct CellIdentifier {

@@ -16,7 +16,7 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var videos = [OLVideo]()
     
-    var gallery: [OLImageItem]!
+    var imageList = [UIImage]()
     
     enum ControllerType {
         case Gallery, Videos
@@ -40,7 +40,7 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     private func fetchVideos() {
         APICaller.getInstance().fetchVideos(
             onSuccessVideos: { videoData in
-                self.videos = videoData.sjec_videos as! [OLVideo]
+                self.videos = videoData.sjpu_videos as! [OLVideo]
                 self.tableView.reloadData()
             }, onError: { _ in
         })
@@ -58,7 +58,6 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-      //  let cell = tableView.dequeueReusableCellWithIdentifier("CollectionViewTableViewCell") as! CollectionViewTableViewCell
         let cell = tableView.dequeueReusableCellWithIdentifier("CollectionViewTableViewCell", forIndexPath: indexPath) as! CollectionViewTableViewCell
         cell.tag = indexPath.row
         return cell
@@ -82,10 +81,11 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let indexNumber = (collectionView.tag * 1) + (collectionView.tag + indexPath.row)
-        
         if controllerType == .Gallery {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Constants.CellIdentifier.GalleryCollectionViewCell, forIndexPath: indexPath) as! GalleryCollectionViewCell
-            updateImage(news[indexNumber].largeImageURL!, indexPath: indexPath, collectionView: collectionView)
+            let galleryItem = news[indexNumber]
+            updateImage(galleryItem.largeImageURL!, indexPath: indexPath, collectionView: collectionView)
+            cell.delegate = self
             return cell
         } else {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Constants.CellIdentifier.VideoCollectionViewCell, forIndexPath: indexPath) as! VideoCollectionViewCell
@@ -117,6 +117,9 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
                     } else {
                         if let cellToUpdate = collectionView.cellForItemAtIndexPath(indexPath) as? GalleryCollectionViewCell {
                             cellToUpdate.imageView.image = image
+                            if !self.imageList.contains(image!) {
+                                self.imageList.append(image!)
+                            }
                         }
                     }
                 })
@@ -133,14 +136,19 @@ class GalleryViewController: UIViewController, UITableViewDataSource, UITableVie
         slidingViewController().anchorTopViewToRightAnimated(true)
     }
     
-    func pushGalleryList() {
+    func pushGalleryList(index: Int) {
         let galleryListViewController = UIStoryboard(Constants.StoryBoard.Gallery).instantiateViewControllerWithIdentifier(Constants.ViewControllerIdentifier.GalleryListViewController) as! GalleryListViewController
+        galleryListViewController.configure(imageList, index: index)
         navigationController?.pushViewController(galleryListViewController, animated: true)
     }
     
     // MARK:- ChooseItem Method
     
-    func chooseSelectedItem(tag: Int) {
+    func chooseSelectedItem(tag: Int, gallery: Bool) {
+        if gallery {
+            pushGalleryList(tag)
+            return
+        }
         let youtubeViewController = UIStoryboard(Constants.StoryBoard.Gallery).instantiateViewControllerWithIdentifier(Constants.ViewControllerIdentifier.YoutubeViewController) as! YoutubeViewController
         youtubeViewController.videoID = videos[tag].videoID
         navigationController?.pushViewController(youtubeViewController, animated: true)
