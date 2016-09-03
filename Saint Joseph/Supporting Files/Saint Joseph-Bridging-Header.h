@@ -10,9 +10,3 @@
 
 // Models
 #import "OLModels.h"
-
-// SDWebImage Workaround
-#undef __IPHONE_OS_VERSION_MIN_REQUIRED
-#define __IPHONE_OS_VERSION_MIN_REQUIRED __IPHONE_7_0
-#import <SDWebImage/UIImageView+WebCache.h>
-#import <SDWebImage/SDWebImageManager.h>

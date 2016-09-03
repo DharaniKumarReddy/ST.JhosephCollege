@@ -30,7 +30,7 @@ class FullNewsViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCellWithIdentifier(Constants.CellIdentifier.FullNewsTableCell) as! FullNewsTableCell
         updateImage(news.largeImageURL!, indexPath: indexPath, tableView: tableView)
         cell.descriptionLabel.text = news.descript
-        cell.dateLabel.text = DateFormatter.defaultFormatter().stringFromDate(news.date!)
+        cell.dateLabel.text = news.updatedAt!
         cell.titleLabel.text = news.title
         return cell
     }
